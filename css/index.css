@@ -1,0 +1,374 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+.pc .slikaHeaderSve .slikaHeader{
+    width:100vw;
+    display:flex;
+    overflow:hidden;
+}
+
+.pc .slikaHeaderSve .dani{
+    font-size:1vw;
+}
+.pc .slikaHeaderSve .naslovHeader{
+    position:absolute;
+    top:0;
+    left:5vw;
+    color:rgb(226, 210, 68);
+}
+
+.pc .slikaHeaderSve .naslovHeader p{
+    font-family:Reggae One;
+    font-size:3vw;
+    
+}
+
+.pc .slikaHeaderSve .naslovHeader #katananaslov{
+    width:10em;
+    position:absolute;
+    top:5em;
+    left:41vw;
+    transform:rotate(45deg);
+}
+
+.pc .slikaHeaderSve .naslovHeader #baloni{
+    width:10em;
+    position:absolute;
+    top:1em;
+    left:32vw;
+}
+
+
+
+.pc .slikaHeaderSve .naslovTajmer {
+    width:36vw;
+    height:8vw;
+    position:absolute;
+    top:1.4vw;
+    left:58vw;
+    display:flex;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pc .slikaHeaderSve .naslovTajmer .dani{
+    width:8vw;
+    height:8vw;
+    background-color:black;
+    border-radius: 50%;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+
+}
+
+.pc .slikaHeaderSve .naslovTajmer .dani p{
+    color:white;
+    font-family: Reggae One;
+    font-size:1.2em;
+    
+}
+
+.pc .header{
+    background-color:black;
+    width:100vw;
+    height:4em;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.pc .header a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left:5em;
+    font-family:Reggae One;
+    
+}
+
+.pc .header a:hover{
+    color:rgb(97, 1, 1);
+    
+    
+}
+
+.pc .header img{
+    width:2vw;
+    color:white;
+    position:absolute;
+    right:5vw;
+    cursor:pointer;
+}
+
+.pc .header p{
+    color:rgb(97, 1, 1);
+    position:absolute;
+    right:9vw;
+    font-family: Reggae One;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.pc .kategorije{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.pc .kategorije .linija{
+    width:20vw;
+    height:.1vw;
+    background-color:white;
+    margin-left:2vw;
+    margin-right:2vw;
+}
+
+.pc .kategorije p{
+    color:white;
+    font-family:Reggae One;
+}
+
+.pc .background{
+    position:fixed;
+    
+    z-index:-1;
+    
+    
+}
+
+.pc .background img{
+    width:100vw;
+    
+}
+
+.pc .slajder{
+    background-color:black;
+    display:flex;
+    width:61.6vw;
+    overflow: hidden;
+    align-items:center;
+    height:16vw;
+    margin-left:19vw;
+    
+}
+
+.pc .slajder .slide img{
+    height:15vw;
+}
+.pc .slajder .slide{
+    padding-left:.4vw;
+    transform:translate(-300%);
+    transition:1s;
+}
+
+.pc .strelicaSlajd img{
+    width:3vw;
+    
+}
+
+.pc .strelicaSlajd{
+    position:absolute;
+}
+
+.pc .strelicaSlajd .livo img{
+    transform:translate(14vw,7vw) rotate(90deg) ;
+}
+
+.pc .strelicaSlajd .desno img{
+    transform:translate(83vw,4vw) rotate(270deg) ;
+}
+
+.pc .slajder .slide .slidecrno{
+    display:none;
+    position:absolute;
+    background-color:black;
+    opacity: 0.8;
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    width:20vw;
+    height:15.3vw;
+    left:0;
+   
+}
+
+.pc .slajder .slide  .slideopis p:nth-child(1) {
+    
+    color:rgb(97, 1, 1);
+    font-family: Reggae One;
+    font-weight:bold;
+    padding-left:3vw;
+    position:absolute;
+    padding-top:1vw;
+    font-size:1.2vw;
+    
+}
+
+.pc .slajder .slide  .slideopis p:nth-child(2)  {
+    
+    color:rgb(255, 255, 255);
+    font-family: Reggae One;
+    font-weight:bold;
+    padding-left:3vw;
+    position:absolute;
+    padding-top:4vw;
+    
+}
+
+.pc .slajder .slide  .slideopis{
+    display:none;
+}
+
+.pc .noveKatane{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin-top:3vw;
+
+
+}
+
+.pc .noveKatane .linija{
+    width:20vw;
+    height:.1vw;
+    background-color:white;
+    margin-left:2vw;
+    margin-right:2vw;
+}
+
+.pc .noveKatane p{
+    color:white;
+    font-family:Reggae One;
+}
+
+
+.pc .pcCrniDioNovi{
+    width:68vw;
+    background-color:black;
+    display:flex;
+    margin-left:15vw;
+    
+    flex-wrap:wrap;
+}
+
+
+
+.pc .pcCrniDioNovi .element{
+    padding:.5vw;
+    width:16vw;
+    font-size:1vw;
+    
+}
+
+
+
+.pc .pcCrniDioNovi .element .slikaElementa img {
+    z-index:1;
+    width:16vw;
+    
+}
+.pc .pcCrniDioNovi .element .animacijaElementa{
+    background-color:rgb(97, 1, 1);
+    margin-top:-3.7vw;
+    z-index:100;
+    position:absolute;
+    width:16vw;
+    display:none;
+    color:white;
+    font-family:Reggae One;
+    text-align:center;
+}
+
+.pc .pcCrniDioNovi .element .opisElementa{
+    color:white;
+    font-family: Reggae One;
+}
+
+.pc .pcCrniDioNovi .element .cijenaElementa{
+    color:white;
+    font-family: Reggae One;
+    font-weight:bold;
+}
+
+.pc .pcCrniDioNovi .element .dugmeKupide{
+    color:white;
+    background-color:rgb(97, 1, 1);
+    text-align:center;
+    width:10vw;  
+    font-family: Reggae One;
+    cursor:pointer;
+}
+
+/* poravnanje dugmeta na nekim elementima  */ 
+.pc .pcCrniDioNovi .element:nth-child(1) .dugmeKupide{
+    margin-top:2.4vw;
+}
+.pc .pcCrniDioNovi .element:nth-child(4) .dugmeKupide{
+    margin-top:2.4vw;
+}
+
+.pc .pcCrniDioNovi .element:nth-child(5) .dugmeKupide{
+    margin-top:2.4vw;
+}
+
+.pc .pcCrniDioNovi .element:nth-child(6) .dugmeKupide{
+    margin-top:2.4vw;
+}
+
+.pc .pcCrniDioNovi .element:nth-child(8) .dugmeKupide{
+    margin-top:2.2vw;
+}
+
+.pc .pcCrniDioNovi .element:nth-child(9) .dugmeKupide{
+    margin-top:2.4vw;
+}
+
+.pc .pcCrniDioNovi .element:nth-child(11) .dugmeKupide{
+    margin-top:1vw;
+}
+
+.pc .pcCrniDioNovi .element:nth-child(12) .dugmeKupide{
+    margin-top:2.4vw;
+}
+
+
+.pc .pcCrniDioNovi .element .dugmeKupide p{
+    padding:.5vw;
+}
+
+@keyframes stvoriElement{
+    0%{opacity: 0;}
+    1%{transform:translate(0,3em)}
+    99%{opacity:1;}
+    100%{transform:translate(0,0em)}
+
+}
+
+@keyframes brisiElement{
+    0%{opacity:1};
+    100%{opacity:0};
+}
+
+@keyframes bojanjeDugme{
+    0%{background-color:rgb(97, 1, 1)}
+    100%{background-color:#E9E9E9}
+}
+
+@keyframes bojanjeDugmeR{  
+    0%{background-color:#E9E9E9}
+    100%{background-color:rgb(97, 1, 1)}
+}
+
+@keyframes bojanjeCart{
+    0%{color:#E9E9E9}
+    100%{color:rgb(97, 1, 1)}
+}
+
+@keyframes bojanjeCartR{
+    0%{color:rgb(97, 1, 1)}
+    100%{color:#E9E9E9}
+}

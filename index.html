@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet"> 
+    <script src="js/tajmer.js"></script>
+    <script src="js/slajder.js"></script>
+    <script src="js/index.js"></script>
+    <title>Jojo's Katana Shop</title>
+</head>
+<body>
+    <div class="pc">
+        <div class="background">
+            <img src="images/background.jpg" alt="">
+        </div>
+        <div class="slikaHeaderSve">
+            <div class="slikaHeader">
+                <img src="images/drvo.jpg" alt="">
+                <img src="images/drvo.jpg" alt="">
+                <img src="images/drvo.jpg" alt="">
+                <img src="images/drvo.jpg" alt="">
+            </div>
+            <div class="naslovHeader">
+                <p>Jojo's Katana Shop</p>
+                <img id="katananaslov" src="images/katananaslov.png" alt="">
+                <img id="baloni" src="images/baloni.png" alt="">
+            </div>
+
+            <div class="naslovTajmer">
+                <div class="dani">
+                    <p id="dani">Days:</p>
+                </div>
+                <div class="dani">
+                    <p id="sati">Hours:</p>
+                </div>
+                <div class="dani">
+                    <p id="minute">Minutes:</p>
+                </div>
+                <div class="dani">
+                    <p id="sekunde">Seconds:</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <div class="header">
+            <a href="#">Home</a>
+            <a href="#">Store</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact Us</a>
+            <p>Cart/$0</p>
+            <img src="images/shopping.png" alt="">
+        </div>
+
+        <div class="kategorije">
+            <div class="linija"></div>
+            <p>SHOP BY CATEGORY</p>
+            <div class="linija"></div>
+        </div>
+
+        <div class="strelicaSlajd">
+            <div onclick="uLivo()" id="pcLivoDugme" class="livo">
+                <img src="images/strelicaslajd.png" alt="">
+            </div>
+            <div onclick="uDesno()" id="pcDesnoDugme" class="desno">
+                <img src="images/strelicaslajd.png" alt="">
+            </div>
+        </div>
+        <div class="slajder">
+            <div onmouseover="minus3slajd()" onmouseout="minus3slajdR()" class="slide">
+                <div class="slidecrno"></div>
+                <div class="slideopis">
+                    <p>Samurai Swords</p>
+                    <p>5 Articles</p>
+                </div>
+                <img src="images/slajder/samurai.jpg" alt="">               
+            </div>
+            
+            <div onmouseover="minus2slajd()" onmouseout="minus2slajdR()" class="slide">
+                <div class="slidecrno"></div>
+                <div class="slideopis">
+                    <p>Wakizashi</p>
+                    <p>5 Articles</p>
+                </div>
+                <img src="images/slajder/vazikasi.jpg" alt="">
+            </div>
+            <div onmouseover="minus1slajd()" onmouseout="minus1slajdR()" class="slide">
+                <div class="slidecrno"></div>
+                <div class="slideopis">
+                    <p>Shirasaya</p>
+                    <p>5 Articles</p>
+                </div>
+                <img src="images/slajder/sirasaja.jpg" alt="">
+            </div>
+
+
+            <div onmouseover="nulaslajd()" onmouseout="nulaslajdR()" class="slide">
+                <div class="slidecrno"></div>
+                <div class="slideopis">
+                    <p>Katana</p>
+                    <p>5 Articles</p>
+                </div>
+                
+                <img src="images/slajder/katana.jpg" alt="">
+            </div>
+            <div onmouseover="jedanslajd()" onmouseout="jedanslajdR()" class="slide">
+                <div class="slidecrno"></div>
+                <div class="slideopis">
+                    <p>Chinese Swords</p>
+                    <p>5 Articles</p>
+                </div>
+                <img src="images/slajder/kinezi.jpg" alt="">
+            </div>
+
+            <div onmouseover="dvaslajd()" onmouseout="dvaslajdR()"class="slide">
+                <div class="slidecrno"></div>
+                <div class="slideopis">
+                    <p>Nagamaki</p>
+                    <p>5 Articles</p>
+                </div>
+                <img src="images/slajder/nagamaki.jpg" alt="">
+                
+            </div>
+
+            <div onmouseover="trislajd()" onmouseout="trislajdR()"class="slide">
+                <div class="slidecrno"></div>
+                <div class="slideopis">
+                    <p>Samurai Swords</p>
+                    <p>5 Articles</p>
+                </div>
+                <img src="images/slajder/samurai.jpg" alt="">               
+            </div>
+            
+            <div onmouseover="cetslajd()" onmouseout="cetslajdR()" class="slide">
+                <div class="slidecrno"></div>
+                <div class="slideopis">
+                    <p>Wakizashi</p>
+                    <p>5 Articles</p>
+                </div>
+                <img src="images/slajder/vazikasi.jpg" alt="">
+            </div>
+            <div onmouseover="petslajd()" onmouseout="petslajdR()" class="slide">
+                <div class="slidecrno"></div>
+                <div class="slideopis">
+                    <p>Shirasaya</p>
+                    <p>5 Articles</p>
+                </div>
+                <img src="images/slajder/sirasaja.jpg" alt="">
+            </div>
+            
+        </div>
+
+        <div class="noveKatane">
+            <div class="linija"></div>
+            <p>LATEST COLLECTION FOR SALE</p>
+            <div class="linija"></div>
+        </div>
+
+        <div class="pcCrniDioNovi">
+            <div class="element">
+                <div onmouseover="prviModel(0)" onmouseout="prviModelR(0)" class="slikaElementa">
+                    <img class="slikaElementaIMG" src="images/novekatane/1_1.jpg" alt="">
+                </div>
+                <div class="animacijaElementa">
+                    <p>QUICK VIEW</p>
+                </div>
+                <div class="opisElementa">
+                    <p>Tanto Knife 1060 Carbon Steel With Matt Black Saya</p>
+                </div>
+                <div class="cijenaElementa">
+                    <p>$149</p>
+                </div>
+                <div onmouseover="prvoDugme(0)" onmouseout="prvoDugmeR(0)" class="dugmeKupide">
+                    <p class="addToCart" >ADD TO CART</p>
+                </div>
+            </div>
+
+            <div class="element">
+                <div onmouseover="drugiModel(1)" onmouseout="drugiModelR(1)" class="slikaElementa">
+                    <img class="slikaElementaIMG" src="images/novekatane/2_1.jpg" alt="">
+                </div>
+                <div class="animacijaElementa">
+                    <p>QUICK VIEW</p>
+                </div>
+                <div class="opisElementa">
+                    <p>Battle Ready Katana Sword T10 Clay Tempered Steel Blue Acid Dye with White Saya</p>
+                </div>
+                <div class="cijenaElementa">
+                    <p>$369</p>
+                </div>
+                <div onmouseover="prvoDugme(1)" onmouseout="prvoDugmeR(1)" class="dugmeKupide">
+                    <p class="addToCart">ADD TO CART</p>
+                </div>
+            </div>
+
+            <div class="element">
+                <div onmouseover="treciModel(2)" onmouseout="treciModelR(2)"class="slikaElementa">
+                    <img class="slikaElementaIMG" src="images/novekatane/3_1.jpg" alt="">
+                </div>
+                <div class="animacijaElementa">
+                    <p>QUICK VIEW</p>
+                </div>
+                <div class="opisElementa">
+                    <p>Battle Ready Katana Choji Hamon T10 Clay Tempered Steel with Hadori Polish</p>
+                </div>
+                <div class="cijenaElementa">
+                    <p>$549</p>
+                </div>
+                <div onmouseover="prvoDugme(2)" onmouseout="prvoDugmeR(2)" class="dugmeKupide">
+                    <p class="addToCart">ADD TO CART</p>
+                </div>
+            </div>
+
+            <div class="element">
+                <div onmouseover="cetModel(3)" onmouseout="cetModelR(3)"class="slikaElementa">
+                    <img class="slikaElementaIMG" src="images/novekatane/4_1.jpg" alt="">
+                </div>
+                <div class="animacijaElementa">
+                    <p>QUICK VIEW</p>
+                </div>
+                <div class="opisElementa">
+                    <p>Japanese Tanto Blade 1095 Folded Steel</p>
+                </div>
+                <div class="cijenaElementa">
+                    <p>$239</p>
+                </div>
+                <div onmouseover="prvoDugme(3)" onmouseout="prvoDugmeR(3)" class="dugmeKupide">
+                    <p class="addToCart">ADD TO CART</p>
+                </div>
+            </div>
+
+            <div class="element">
+                <div onmouseover="petModel(4)" onmouseout="petModelR(4)" class="slikaElementa">
+                    <img class="slikaElementaIMG" src="images/novekatane/5_1.jpg" alt="">
+                </div>
+                <div class="animacijaElementa">
+                    <p>QUICK VIEW</p>
+                </div>
+                <div class="opisElementa">
+                    <p>Battle Ready Katana 1060 Carbon Steel with Sparkle Black Hardwood Saya</p>
+                </div>
+                <div class="cijenaElementa">
+                    <p>$279</p>
+                </div>
+                <div onmouseover="prvoDugme(4)" onmouseout="prvoDugmeR(4)"class="dugmeKupide">
+                    <p class="addToCart">ADD TO CART</p>
+                </div>
+            </div>
+
+            <div class="element">
+                <div onmouseover="sestModel(5)" onmouseout="sestModelR(5)" class="slikaElementa">
+                    <img class="slikaElementaIMG" src="images/novekatane/6_1.jpg" alt="">
+                </div>
+                <div class="animacijaElementa">
+                    <p>QUICK VIEW</p>
+                </div>
+                <div class="opisElementa">
+                    <p>1060 Carbon Steel Tanto Knife With Matt Black Sun Tzu saya</p>
+                </div>
+                <div class="cijenaElementa">
+                    <p>$179</p>
+                </div>
+                <div onmouseover="prvoDugme(5)" onmouseout="prvoDugmeR(5)" class="dugmeKupide">
+                    <p class="addToCart">ADD TO CART</p>
+                </div>
+            </div>
+
+            <div class="element">
+                <div onmouseover="sedamModel(6)" onmouseout="sedamModelR(6)" class="slikaElementa">
+                    <img class="slikaElementaIMG" src="images/novekatane/7_1.jpg" alt="">
+                </div>
+                <div class="animacijaElementa">
+                    <p>QUICK VIEW</p>
+                </div>
+                <div class="opisElementa">
+                    <p>Battle Ready Shirasaya Katana T10 Folded Clay Tempered Steel Gloss Black Sun Tzu Saya</p>
+                </div>
+                <div class="cijenaElementa">
+                    <p>$469</p>
+                </div>
+                <div onmouseover="prvoDugme(6)" onmouseout="prvoDugmeR(6)" class="dugmeKupide">
+                    <p class="addToCart">ADD TO CART</p>
+                </div>
+            </div>
+
+            <div class="element">
+                <div onmouseover="osamModel(7)" onmouseout="osamModelR(7)" class="slikaElementa">
+                    <img class="slikaElementaIMG" src="images/novekatane/8_1.jpg" alt="">
+                </div>
+                <div class="animacijaElementa">
+                    <p>QUICK VIEW</p>
+                </div>
+                <div class="opisElementa">
+                    <p>Japanese Katana T10 Folded Clay Tempered Steel with Hadori Polish</p>
+                </div>
+                <div class="cijenaElementa">
+                    <p>$799</p>
+                </div>
+                <div onmouseover="prvoDugme(7)" onmouseout="prvoDugmeR(7)" class="dugmeKupide">
+                    <p class="addToCart">ADD TO CART</p>
+                </div>
+            </div>
+
+            <div class="element">
+                <div onmouseover="devetModel(8)" onmouseout="devetModelR(8)" class="slikaElementa">
+                    <img class="slikaElementaIMG" src="images/novekatane/9_1.jpg" alt="">
+                </div>
+                <div class="animacijaElementa">
+                    <p>QUICK VIEW</p>
+                </div>
+                <div class="opisElementa">
+                    <p>Shirasaya Tanto 1095 Folded Steel with Ebony Wood Saya</p>
+                </div>
+                <div class="cijenaElementa">
+                    <p>$329</p>
+                </div>
+                <div onmouseover="prvoDugme(8)" onmouseout="prvoDugmeR(8)" class="dugmeKupide">
+                    <p class="addToCart">ADD TO CART</p>
+                </div>
+            </div>
+
+            <div class="element">
+                <div onmouseover="desetModel(9)" onmouseout="desetModelR(9)" class="slikaElementa">
+                    <img class="slikaElementaIMG" src="images/novekatane/10_1.jpg" alt="">
+                </div>
+                <div class="animacijaElementa">
+                    <p>QUICK VIEW</p>
+                </div>
+                <div class="opisElementa">
+                    <p>Battle Ready Katana Samurai Sword T10 Clay Tempered Steel with Black Acid Dye</p>
+                </div>
+                <div class="cijenaElementa">
+                    <p>$349</p>
+                </div>
+                <div onmouseover="prvoDugme(9)" onmouseout="prvoDugmeR(9)" class="dugmeKupide">
+                    <p class="addToCart">ADD TO CART</p>
+                </div>
+            </div>
+
+            <div class="element">
+                <div onmouseover="jedanaestModel(10)" onmouseout="jedanaestModelR(10)" class="slikaElementa">
+                    <img class="slikaElementaIMG" src="images/novekatane/11_1.jpg" alt="">
+                </div>
+                <div class="animacijaElementa">
+                    <p>QUICK VIEW</p>
+                </div>
+                <div class="opisElementa">
+                    <p>Hexagon Rosewood Shirasaya T10 Clay Tempered Steel Kiriha Zukuri</p>
+                </div>
+                <div class="cijenaElementa">
+                    <p>$429</p>
+                </div>
+                <div onmouseover="prvoDugme(10)" onmouseout="prvoDugmeR(10)" class="dugmeKupide">
+                    <p class="addToCart">ADD TO CART</p>
+                </div>
+            </div>
+
+            <div class="element">
+                <div onmouseover="dvanaestModel(11)" onmouseout="dvanaestModelR(11)" class="slikaElementa">
+                    <img class="slikaElementaIMG" src="images/novekatane/12_1.jpg" alt="">
+                </div>
+                <div class="animacijaElementa">
+                    <p>QUICK VIEW</p>
+                </div>
+                <div class="opisElementa">
+                    <p>Samurai Nodachi Sword 1060 Carbon Steel with White Saya</p>
+                </div>
+                <div class="cijenaElementa">
+                    <p>$349</p>
+                </div>
+                <div onmouseover="prvoDugme(11)" onmouseout="prvoDugmeR(11)" class="dugmeKupide">
+                    <p class="addToCart">ADD TO CART</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
