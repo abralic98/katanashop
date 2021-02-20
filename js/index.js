@@ -1,7 +1,5 @@
 // hoveranje preko slajdera
-function obrisimesutra(){
-    
-}
+
 function minus3slajd(){
     let crno=document.getElementsByClassName("slidecrno");
     let slideopis=document.getElementsByClassName("slideopis");
