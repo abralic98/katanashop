@@ -1,6 +1,9 @@
 body{
     margin:0;
     padding:0;
+    overflow-x: hidden;
+    
+    
 }
 
 .pc .slikaHeaderSve .slikaHeader{
@@ -80,13 +83,17 @@ body{
     align-items: center;
     justify-content: center;
     
+    
+    
 }
 
 .pc .header a{
+    transform:translate(-5vw);
     color:white;
     text-decoration: none;
     font-weight: bold;
     padding-left:5em;
+    
     font-family:Reggae One;
     
 }
@@ -132,6 +139,7 @@ body{
 .pc .kategorije p{
     color:white;
     font-family:Reggae One;
+    font-size:1.2vw;
 }
 
 .pc .background{
@@ -242,6 +250,7 @@ body{
 
 .pc .noveKatane p{
     color:white;
+    font-size:1.2vw;
     font-family:Reggae One;
 }
 
@@ -250,7 +259,8 @@ body{
     width:68vw;
     background-color:black;
     display:flex;
-    margin-left:15vw;
+    margin-left:auto;
+    margin-right:auto;
     
     flex-wrap:wrap;
 }
@@ -371,4 +381,142 @@ body{
 @keyframes bojanjeCartR{
     0%{color:rgb(97, 1, 1)}
     100%{color:#E9E9E9}
+}
+
+.pc .exploreShopDugme{
+    width:70vw;
+    height:3vw;
+    background-color: rgb(97, 1, 1);
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:2vw;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin-top:2vw;
+    cursor:pointer;
+}
+
+.pc .exploreShopDugme:hover{
+    
+    background-color:rgb(112, 0, 0);
+}
+
+.pc .exploreShopDugme p{
+    font-family: Reggae One;
+    color:White;
+    font-size: 1vw;
+}
+
+.pc .whyUs{
+    width:70vw;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:black;
+}
+
+.pc .whyUs p{
+    color:white;
+    font-family: Reggae One;
+    font-size: 1vw;
+    padding:1vw;
+}
+
+.pc .whyUs .slikeWhyUs{
+    display:flex;
+    justify-content: space-around;
+    padding-left:2vw;
+    padding-right:2vw;
+
+}
+
+.pc .whyUs .slikeWhyUs img{
+    width:20vw;
+    height:13vw;
+}
+.pc .whyUs .slikeWhyUs .slikaOpis{
+    margin-top:2vw;
+    width:20vw;
+   
+}
+
+.pc .whyUs .slikeWhyUs .slikaOpis p{
+    color:white;
+    font-family: Reggae One;
+    font-size:1vw;
+    position:relative;
+    text-align: center;
+
+}
+
+
+
+.pc .whyUs .slikeWhyUs .slikaOpis h2{
+    color:white;
+    font-family: Reggae One;
+    font-size:1vw;
+    text-align: center;
+}
+
+@keyframes pomakniGore{
+    0%{transform:translate(0,0vw)}
+    100%{transform:translate(0vw,-1vw)}
+}
+
+@keyframes pomakniDole{
+    0%{transform:translate(0,-1vw)}
+    100%{transform:translate(0,0vw)}
+}
+
+.pc .whyUs .review {
+    display:flex;
+    margin-top:2vw;
+}
+
+.pc .whyUs .review .reviews .stars{
+    display:Flex;
+    justify-content: center;
+}
+.pc .whyUs .review .reviews .stars .star{
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color:red;
+    width:1vw;
+    height:1vw;
+}
+
+.pc .whyUs .review .reviews{
+    text-align: center;
+    font-family: Reggae One;
+    color:white;
+}
+
+.pc .whyUs .whatToExpect #pWhatToExpect{
+    padding-left:5vw;
+    padding-right:5vw;
+    margin-top:-.5vw;
+}
+
+.pc .whyUs .listaOcekivanja{
+    display:flex;
+    
+}
+
+.pc .whyUs .listaOcekivanja .noveKatane{
+    width:35vw;
+}
+
+.pc .whyUs .listaOcekivanja .noveKatane .linija{
+    width:6vw;
+}
+
+.pc .footer{
+    background-color:black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:5vw;
+    margin-top:1vw;
+    color:white;
+    font-family: Reggae One;
 }

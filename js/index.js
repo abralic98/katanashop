@@ -406,3 +406,16 @@ function prvoDugmeR(broj){
     dugme[broj].style.animation="bojanjeDugmeR 1s forwards";
     tekst[broj].style.animation="bojanjeCartR 1s forwards";
 }
+
+
+// 3 diva da se pomicu gore na hover
+
+function pomakniGore(a){
+    let bar=document.getElementsByClassName("slikaOpis");
+    bar[a].style.animation="pomakniGore .5s forwards";
+}
+
+function pomakniDole(a){
+    let bar=document.getElementsByClassName("slikaOpis");
+    bar[a].style.animation="pomakniDole .5s forwards";
+}
