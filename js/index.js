@@ -417,3 +417,177 @@ function pomakniDole(a){
     let bar=document.getElementsByClassName("slikaOpis");
     bar[a].style.animation="pomakniDole .5s forwards";
 }
+
+let brojItemaArray=0;
+let cijenaUkupno=0;
+// ARRAY SA ITEMIMA
+
+function dodajItem(brojItema){
+    brojItemaArray++;
+    let noviHTML
+    let ime=document.getElementsByClassName("opisElementaP");
+    let cijena=document.getElementsByClassName("cijenaElementaP");
+    let editovanje=document.getElementsByClassName("listaItema"); //cili blok
+    let empty=document.getElementsByClassName("addITEMS");
+    let finalnaCijena=document.getElementsByClassName("zbrojenaCijena");
+    let headerCijena=document.getElementById("cijenaCart");
+    
+    empty[0].innerHTML="ITEMS: "+brojItemaArray;
+    
+    let stariHTML=editovanje[0].innerHTML;   
+    
+    
+    let objekt=new item(ime[brojItema].innerHTML,cijena[brojItema].innerHTML);
+    items.push(objekt)
+    console.log(items);
+    let cijenaBez$; 
+    cijenaBez$=cijena[brojItema].innerHTML.substring(1);
+    for(let i=0; i<items.length; i++){
+        noviHTML=stariHTML+
+    `<div class="cartItem">
+        <p class="imeModela">${items[i].ime}</p>
+        <div class="cartLinija">
+        </div>
+        <p class="cijenaModela">${items[i].cijena}</p>
+        <div onclick="obrisiItem(${i})"class="cartX">
+            <p> X </p> 
+        </div>
+    </div>`;
+    //console.log(items[i].ime)
+    //console.log(brojItema)
+    //console.log(noviHTML)
+    //console.log("broj puta: "+i)
+    }
+    
+    //console.log(noviHTML)
+    editovanje[0].innerHTML=noviHTML;   
+    cijenaUkupno=Number(cijenaUkupno)+Number(cijenaBez$);
+    finalnaCijena[0].innerHTML="$"+cijenaUkupno;
+    headerCijena.innerHTML="$"+cijenaUkupno;
+    console.log(items.length)
+    
+}
+
+function obrisiItem(brojItema){
+    brojItemaArray--
+    let noviHTML;
+    let ime=document.getElementsByClassName("opisElementaP");
+    let cijena=document.getElementsByClassName("cijenaElementaP");
+    let editovanje=document.getElementsByClassName("listaItema");
+    let empty=document.getElementsByClassName("addITEMS");
+    let finalnaCijena=document.getElementsByClassName("zbrojenaCijena");
+    let headerCijena=document.getElementById("cijenaCart");
+    
+    empty[0].innerHTML="ITEMS: "+brojItemaArray;
+    
+    let stariHTML="";   
+    
+    if(brojItema>-1){
+        items.splice(brojItema,1)
+    }
+    console.log(items)
+    let cijenaBez$; 
+    
+    cijenaBez$=cijena[brojItema].innerHTML.substring(1);
+    
+    for(let i=0; i<items.length; i++){
+        noviHTML=stariHTML+
+    `<div class="cartItem">
+        <p class="imeModela">${items[i].ime}</p>
+        <div class="cartLinija">
+        </div>
+        <p class="cijenaModela">${items[i].cijena}</p>
+        <div onclick="obrisiItem(${i})"class="cartX">
+            <p> X </p> 
+        </div>
+    </div>`;
+    //console.log(items[i].ime)
+    //console.log(brojItema)
+    //console.log(noviHTML)
+    //console.log("broj puta: "+i)
+    }
+    
+
+    editovanje[0].innerHTML=noviHTML;   
+    
+    cijenaUkupno=Number(cijenaUkupno)-Number(cijenaBez$);
+    finalnaCijena[0].innerHTML="$"+cijenaUkupno;
+    headerCijena.innerHTML="$"+cijenaUkupno;
+    
+}
+let items=[];
+
+function item(ime,cijena){
+    this.ime=ime;
+    this.cijena=cijena;
+}
+
+function cancel(){
+    let blok=document.getElementsByClassName("pcCartBar");
+    blok[0].style.animation="cartNestani 2s forwards";
+    setTimeout(displayNoneCart,2000);
+   
+}
+
+function cartStvori(){
+    let blok=document.getElementsByClassName("pcCartBar");
+    blok[0].style.display="block";
+    blok[0].style.animation="cartStvoriSe 2s forwards";
+}
+
+function displayNoneCart(){
+    let blok=document.getElementsByClassName("pcCartBar");
+    blok[0].style.display="none";
+}
+
+
+// FAQ DIO
+
+let brojrotiranja=-1;
+
+function prebaciHOME(){
+    let home=document.getElementById("homeDio").style.display="block";
+    let faq=document.getElementById("faqDio").style.display="none";
+    let contact=document.getElementById("contactDio").style.display="none";
+}
+
+function prebaciFAQ(){
+    let home=document.getElementById("homeDio").style.display="none";
+    let faq=document.getElementById("faqDio").style.display="block";
+    let contact=document.getElementById("contactDio").style.display="none";
+}
+
+function prebaciContact(){
+    let home=document.getElementById("homeDio").style.display="none";
+    let faq=document.getElementById("faqDio").style.display="none";
+    let contact=document.getElementById("contactDio").style.display="flex";
+}
+
+function zarotirajStrelicu(brojStrelice){
+    brojrotiranja++
+    let strelica=document.getElementsByClassName("faqStrelica");
+    let linija=document.getElementsByClassName("pitanjaLinija");
+    let odgovor=document.getElementsByClassName("odgovor");
+    for(let i=0; i<linija.length; i++){
+        if(i!=brojStrelice){
+            linija[i].style.background="white";
+            odgovor[i].style.display="none";
+            if(brojrotiranja>0){
+                strelica[i].style.animation="strelicaRotateR .5s forwards";
+            }
+            
+        }
+    }
+    if(linija[brojStrelice].style.background!="red"){
+        strelica[brojStrelice].style.animation="strelicaRotate .5s forwards";
+        linija[brojStrelice].style.background="red";
+        odgovor[brojStrelice].style.display="block";
+        
+    }else{
+        strelica[brojStrelice].style.animation="strelicaRotateR .5s forwards";
+        linija[brojStrelice].style.background="white";
+        odgovor[brojStrelice].style.display="none";
+    }
+  
+}
+

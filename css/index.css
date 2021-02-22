@@ -78,23 +78,25 @@ body{
 .pc .header{
     background-color:black;
     width:100vw;
-    height:4em;
+    height:4vw;
+    position:sticky;
+    top:0;
+    z-index:5;
     display:flex;
-    align-items: center;
-    justify-content: center;
-    
-    
+
+}
+.pc .header a:nth-child(1){
+    padding-left:38vw;
     
 }
 
-.pc .header a{
-    transform:translate(-5vw);
+.pc .header a{ 
     color:white;
     text-decoration: none;
     font-weight: bold;
-    padding-left:5em;
-    
     font-family:Reggae One;
+    padding-left:4vw;
+    padding-top:1.3vw;
     
 }
 
@@ -109,13 +111,16 @@ body{
     color:white;
     position:absolute;
     right:5vw;
+    top:1vw;
     cursor:pointer;
 }
 
-.pc .header p{
+.pc .header #cijenaCart{
     color:rgb(97, 1, 1);
     position:absolute;
+    
     right:9vw;
+    top:.5vw;
     font-family: Reggae One;
     font-weight:bold;
     cursor:pointer;
@@ -519,4 +524,322 @@ body{
     margin-top:1vw;
     color:white;
     font-family: Reggae One;
+}
+
+.pc .pcCartBar{
+    
+    border:30px solid transparent;
+    border-image: url("/images/test.png") 1 500 round; /* ovo triba neko objasnit nemam pojma kako radi ali je ok sad ovako*/
+    width:20vw;
+    height:30vw;
+    background-color: black;
+    position:absolute;
+    right:1vw;
+    top:4vw;
+    display:none;
+    
+    z-index:5;
+    
+}
+
+.pc .pcCartBar .logoIcijena{
+    display:Flex;
+    align-items:center;
+    
+}
+
+.pc .pcCartBar .logoIcijena h2{
+    color:rgb(226, 210, 68);
+    font-family: Reggae One;
+    padding-left:4vw;
+}
+
+
+
+.pc .pcCartBar .logoIcijena p{
+    position:absolute;
+    right:3em;
+    color:rgb(97, 1, 1);
+    font-family: Reggae One;
+    font-weight: bold;
+}
+
+.pc .pcCartBar .cartBarDugmici{
+    display:flex;
+    
+    justify-content: space-between;
+    width:20vw;
+    height:2vw;
+    position:absolute;
+    bottom:0;
+    
+}
+
+.pc .pcCartBar .cartBarDugmici .cancel{
+    width:6vw;
+    background-color:rgb(97, 1, 1);
+    margin-left:1vw;
+    border-radius:1vw;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    cursor:pointer;
+    
+}
+
+.pc .pcCartBar .cartBarDugmici .cancel:hover{
+    background-color:rgb(128, 0, 0);
+}
+
+.pc .pcCartBar .cartBarDugmici .cancel p{
+    font-family: Reggae One;
+    color:white;
+    
+}
+
+.pc .pcCartBar .cartBarDugmici .checkOut{
+    width:6vw;
+    margin-right:1vw;
+    background-color:rgb(0, 126, 48);
+    border-radius:1vw;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    justify-content: center;
+}
+
+.pc .pcCartBar .cartBarDugmici .checkOut:hover{
+    background-color:rgb(0, 156, 60)
+}
+
+.pc .pcCartBar .cartBarDugmici .checkOut p{
+    font-family: Reggae One;
+    color:white;
+    
+}
+
+/* ITEMI U CARTU */
+
+
+.pc .pcCartBar .listaItema{
+    display:flex;
+    flex-direction: column;
+}
+
+.pc .pcCartBar .listaItema .cartItem{
+    display:flex;
+    width:20vw;
+    border-top:1px solid white;
+    border-bottom:1px solid white;  
+    justify-content: space-between;
+    align-items: center;
+    position:relative;
+    
+}
+
+.pc .pcCartBar .listaItema .cartItem .cijenaModela{
+    margin-right:1vw;
+   
+}
+.pc .pcCartBar .listaItema .cartItem .cartX{
+    margin-right:1vw;
+}
+.pc .pcCartBar .listaItema .cartItem .cartX p{
+    color:rgb(128, 0, 0);
+    font-size: 1.2vw;
+}
+
+.pc .pcCartBar .listaItema .cartItem .imeModela{
+    margin-left:1vw;
+    width:13vw;
+}
+
+.pc #addITEMS{
+    text-align: center;
+    color:rgb(128, 0, 0);
+    
+    font-family: Reggae One;
+}
+    
+
+
+
+.pc .pcCartBar .listaItema .cartItem p{
+    color:white;
+    font-family: Reggae One;
+}
+
+@keyframes cartNestani{
+    0%{transform:translate(0vw,0vw)}
+    100%{transform:translate(25vw,0vw)}
+}
+
+@keyframes cartStvoriSe{
+    0%{transform:translate(25vw,0vw)}
+    100%{transform:translate(0vw,0vw)}
+}
+
+/* FAQ -------------------------------------------------------------------------------------------------------------
+
+*/
+
+.pc .faqDio{
+    width:80vw;
+    background-color:black;
+    margin-left:auto;
+    margin-right:auto;
+    display:none;
+}
+.pc .faqDio .pitanja{
+    padding-left:2vw;
+    padding-right:2vw;
+    cursor: pointer;
+}
+
+.pc .faqDio .pitanja:nth-child(9){
+    padding-bottom:1vw;
+}
+.pc .faqDio .pitanja .pitanje{
+    display:flex;
+    align-items:center;
+}
+.pc .faqDio .pitanja .pitanje h2{
+    color:white;
+    font-family: Reggae One;
+    font-size:1vw;
+}
+.pc .faqDio .pitanja .pitanje img{
+    width:2vw;
+    height:2vw;
+}
+.pc .faqDio .pitanja .odgovor p{
+    color:white;
+    font-family: Reggae One;
+    font-size:1vw;
+}
+.pc .faqDio .pitanja .pitanjaLinija{
+    width:76vw;
+    height:.1vw;
+    background-color:white;
+}
+.pc .faqDio .pitanja .odgovor{
+    display:none;
+}
+.pc .faqDio .pitanja .odgovor p{
+    padding-left:2vw;
+    padding-right:2vw;
+    
+}
+
+@keyframes strelicaRotate{
+    0%{transform:rotate(0deg);}
+    100%{transform: rotate(180deg);}
+}
+@keyframes strelicaRotateR{
+    0%{transform:rotate(180deg)}
+    100%{transform:rotate(0deg)}
+}
+
+.pc .contactDio{
+    width:80vw;
+    display:none;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-left:auto;
+    margin-right:auto;
+    
+    background-color: black;
+    
+    
+}
+
+.pc .contactDio .kontakt .ime p{
+    font-family: Reggae One;
+    font-size:1vw;
+    color:white;
+    padding-left:2vw;
+    padding-top:1vw;
+    cursor:pointer;
+    
+}
+.pc .contactDio input{
+    font-family: Reggae One;
+    font-size:1vw;
+    color:black;
+    width:45vw;
+    height:2vw;
+    margin-left:2vw;
+   
+}
+.pc .contactDio input{
+    font-family: Reggae One;
+    font-size:1vw;
+    color:black;
+    width:45vw;
+    height:2vw;
+    margin-left:2vw;
+   
+}
+
+.pc .contactDio .inputContactMSG{
+    height:8vw;
+}
+
+
+.pc .contactDio .vertikalnaLinija{
+    width:.1vw;
+    height:40vw;
+    margin-left:5vw;
+    background-color: white;
+}
+
+.pc .contactDio .kontaktListaItema{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:3vw;
+}
+.pc .contactDio .kontaktListaItema h2{
+    color:rgb(97, 1, 1);
+    font-family: Reggae One;
+    font-size:1vw;
+}
+.pc .contactDio .kontaktListaItema p{
+    color:white;
+    font-family: Reggae One;
+    font-size:1vw;
+    cursor:pointer;
+}
+
+.pc .contactDio .dugmeSend{   
+    background-color:rgb(97, 1, 1);
+    display:flex; 
+    cursor:pointer;
+    width:10vw;
+    margin-left:2vw;
+    margin-top:2vw;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-size:1vw;
+    font-family: Reggae One;
+}
+.pc .contactDio .dugmeSend:hover{
+    background-color:rgb(122, 2, 2);
+}
+
+.pc .contactDio .drustvene img{
+    width:3vw;
+    padding-left:1vw;
+}
+.pc .contactDio .drustvene img:nth-child(1){
+    height:2vw;
+    margin-top:.5vw;
+}
+.pc .contactDio .drustvene{
+    display:flex;
+    cursor:pointer;
+}
+
+.pc .contactDio #socialMedia{
+    margin-top:2vw;
 }
