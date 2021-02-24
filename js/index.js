@@ -549,18 +549,28 @@ function prebaciHOME(){
     let home=document.getElementById("homeDio").style.display="block";
     let faq=document.getElementById("faqDio").style.display="none";
     let contact=document.getElementById("contactDio").style.display="none";
+    let store=document.getElementById("storeDio").style.display="none";
+}
+
+function prebaciStore(){
+    let home=document.getElementById("homeDio").style.display="none";
+    let faq=document.getElementById("faqDio").style.display="none";
+    let contact=document.getElementById("contactDio").style.display="none";
+    let store=document.getElementById("storeDio").style.display="block";
 }
 
 function prebaciFAQ(){
     let home=document.getElementById("homeDio").style.display="none";
     let faq=document.getElementById("faqDio").style.display="block";
     let contact=document.getElementById("contactDio").style.display="none";
+    let store=document.getElementById("storeDio").style.display="none";
 }
 
 function prebaciContact(){
     let home=document.getElementById("homeDio").style.display="none";
     let faq=document.getElementById("faqDio").style.display="none";
     let contact=document.getElementById("contactDio").style.display="flex";
+    let store=document.getElementById("storeDio").style.display="none";
 }
 
 function zarotirajStrelicu(brojStrelice){
