@@ -552,12 +552,6 @@ function prebaciHOME(){
     let store=document.getElementById("storeDio").style.display="none";
 }
 
-function prebaciStore(){
-    let home=document.getElementById("homeDio").style.display="none";
-    let faq=document.getElementById("faqDio").style.display="none";
-    let contact=document.getElementById("contactDio").style.display="none";
-    let store=document.getElementById("storeDio").style.display="block";
-}
 
 function prebaciFAQ(){
     let home=document.getElementById("homeDio").style.display="none";
@@ -600,4 +594,7 @@ function zarotirajStrelicu(brojStrelice){
     }
   
 }
+
+
+
 

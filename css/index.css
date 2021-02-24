@@ -378,6 +378,16 @@ body{
     100%{background-color:rgb(97, 1, 1)}
 }
 
+@keyframes bojanjeDugme1{
+    0%{background-color:rgb(97, 1, 1)}
+    100%{background-color:#E9E9E9}
+}
+
+@keyframes bojanjeDugme1R{  
+    0%{background-color:#E9E9E9}
+    100%{background-color:rgb(97, 1, 1)}
+}
+
 @keyframes bojanjeCart{
     0%{color:#E9E9E9}
     100%{color:rgb(97, 1, 1)}
@@ -851,7 +861,11 @@ body{
     background-color:black; 
     padding-left:2vw;
     padding-top:2vw; 
+    display:none;
+   
 }
+
+
 
 
 .pc .storeDio .inputSearch{
@@ -931,17 +945,19 @@ body{
 
 .pc .storeDio .filter .klasaSteel{
     display:flex;
-    
+    cursor:pointer;
     justify-content: space-between;
     align-items:center;
     width:18vw;
 }
+
 
 .pc .storeDio .filter .klasaSteel h4{
     color:white;
     font-family: Reggae One;
     font-size:1vw;
 }
+
 .pc .storeDio .filter .klasaSteel p{
     color:grey;
     font-family:Reggae One;
@@ -972,4 +988,99 @@ body{
     width:1.5vw;
     height:1.5vw;
     border-radius:50%;
+}
+
+.pc .pcCrniDioNovi1{
+    width:51vw;
+    background-color:black;
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+    
+    flex-wrap:wrap;
+}
+
+
+
+.pc .pcCrniDioNovi1 .element{
+    padding:.5vw;
+    width:16vw;
+    font-size:1vw;
+    
+}
+
+
+
+.pc .pcCrniDioNovi1 .element .slikaElementa img {
+    z-index:1;
+    width:16vw;
+    
+}
+.pc .pcCrniDioNovi1 .element .animacijaElementa{
+    background-color:rgb(97, 1, 1);
+    margin-top:-3.7vw;
+    z-index:100;
+    position:absolute;
+    width:16vw;
+    display:none;
+    color:white;
+    font-family:Reggae One;
+    text-align:center;
+}
+
+.pc .pcCrniDioNovi1 .element .opisElementa{
+    color:white;
+    font-family: Reggae One;
+}
+
+.pc .pcCrniDioNovi1 .element .cijenaElementa{
+    color:white;
+    font-family: Reggae One;
+    font-weight:bold;
+}
+
+.pc .pcCrniDioNovi1 .element .dugmeKupide{
+    color:white;
+    background-color:rgb(97, 1, 1);
+    text-align:center;
+    width:10vw;  
+    font-family: Reggae One;
+    cursor:pointer;
+}
+
+/* poravnanje dugmeta na nekim elementima  */ 
+.pc .pcCrniDioNovi1 .element:nth-child(1) .dugmeKupide{
+    margin-top:2.4vw;
+}
+.pc .pcCrniDioNovi1 .element:nth-child(4) .dugmeKupide{
+    margin-top:2.4vw;
+}
+
+.pc .pcCrniDioNovi1 .element:nth-child(5) .dugmeKupide{
+    margin-top:2.4vw;
+}
+
+.pc .pcCrniDioNovi1 .element:nth-child(6) .dugmeKupide{
+    margin-top:2.4vw;
+}
+
+.pc .pcCrniDioNovi1 .element:nth-child(8) .dugmeKupide{
+    margin-top:2.2vw;
+}
+
+.pc .pcCrniDioNovi1 .element:nth-child(9) .dugmeKupide{
+    margin-top:2.4vw;
+}
+
+.pc .pcCrniDioNovi1 .element:nth-child(11) .dugmeKupide{
+    margin-top:1vw;
+}
+
+.pc .pcCrniDioNovi1 .element:nth-child(12) .dugmeKupide{
+    margin-top:2.4vw;
+}
+
+
+.pc .pcCrniDioNovi1 .element .dugmeKupide p{
+    padding:.5vw;
 }
