@@ -541,13 +541,12 @@ body{
     border:30px solid transparent;
     border-image: url("/images/test.png") 1 500 round; /* ovo triba neko objasnit nemam pojma kako radi ali je ok sad ovako*/
     width:20vw;
-    height:30vw;
     background-color: black;
     position:absolute;
     right:1vw;
     top:4vw;
     display:none;
-    
+    padding-bottom:5vw;
     z-index:5;
     
 }

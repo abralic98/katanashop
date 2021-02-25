@@ -449,7 +449,7 @@ function dodajItem(brojItema){
         <div class="cartLinija">
         </div>
         <p class="cijenaModela">${items[i].cijena}</p>
-        <div onclick="obrisiItem(${i})"class="cartX">
+        <div onclick="obrisiItem(${i},${items[i].cijena.substring(1)})"class="cartX">
             <p> X </p> 
         </div>
     </div>`;
@@ -468,7 +468,7 @@ function dodajItem(brojItema){
     
 }
 
-function obrisiItem(brojItema){
+function obrisiItem(brojItema,cena){
     brojItemaArray--
     let noviHTML;
     let ime=document.getElementsByClassName("opisElementaP");
@@ -489,15 +489,16 @@ function obrisiItem(brojItema){
     let cijenaBez$; 
     
     cijenaBez$=cijena[brojItema].innerHTML.substring(1);
-    
+    console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG")
+    console.log(items.length)
     for(let i=0; i<items.length; i++){
-        noviHTML=stariHTML+
+        stariHTML=stariHTML+
     `<div class="cartItem">
         <p class="imeModela">${items[i].ime}</p>
         <div class="cartLinija">
         </div>
         <p class="cijenaModela">${items[i].cijena}</p>
-        <div onclick="obrisiItem(${i})"class="cartX">
+        <div onclick="obrisiItem(${i},${items[i].cijena.substring(1)})"class="cartX">
             <p> X </p> 
         </div>
     </div>`;
@@ -505,10 +506,12 @@ function obrisiItem(brojItema){
     //console.log(brojItema)
     //console.log(noviHTML)
     //console.log("broj puta: "+i)
+    
     }
     
-
-    editovanje[0].innerHTML=noviHTML;   
+    cijenaBez$=cena;
+    console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG NAKON PETLJE")
+    editovanje[0].innerHTML=stariHTML;   
     
     cijenaUkupno=Number(cijenaUkupno)-Number(cijenaBez$);
     finalnaCijena[0].innerHTML="$"+cijenaUkupno;
