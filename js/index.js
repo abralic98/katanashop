@@ -432,6 +432,10 @@ function dodajItem(brojItema){
     let finalnaCijena=document.getElementsByClassName("zbrojenaCijena");
     let headerCijena=document.getElementById("cijenaCart");
     
+   
+    
+    
+    
     empty[0].innerHTML="ITEMS: "+brojItemaArray;
     
     let stariHTML=editovanje[0].innerHTML;   
@@ -489,8 +493,8 @@ function obrisiItem(brojItema,cena){
     let cijenaBez$; 
     
     cijenaBez$=cijena[brojItema].innerHTML.substring(1);
-    console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG")
-    console.log(items.length)
+    //console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG")
+    //console.log(items.length)
     for(let i=0; i<items.length; i++){
         stariHTML=stariHTML+
     `<div class="cartItem">
@@ -510,10 +514,11 @@ function obrisiItem(brojItema,cena){
     }
     
     cijenaBez$=cena;
-    console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG NAKON PETLJE")
+    //console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG NAKON PETLJE")
     editovanje[0].innerHTML=stariHTML;   
-    
+    console.log(cena+ " CENA")
     cijenaUkupno=Number(cijenaUkupno)-Number(cijenaBez$);
+    console.log(cijenaUkupno);
     finalnaCijena[0].innerHTML="$"+cijenaUkupno;
     headerCijena.innerHTML="$"+cijenaUkupno;
     
@@ -527,7 +532,7 @@ function item(ime,cijena){
 
 function cancel(){
     let blok=document.getElementsByClassName("pcCartBar");
-    blok[0].style.animation="cartNestani 2s forwards";
+    blok[0].style.animation="cartNestani 1s forwards";
     setTimeout(displayNoneCart,2000);
    
 }
@@ -535,7 +540,7 @@ function cancel(){
 function cartStvori(){
     let blok=document.getElementsByClassName("pcCartBar");
     blok[0].style.display="block";
-    blok[0].style.animation="cartStvoriSe 2s forwards";
+    blok[0].style.animation="cartStvoriSe 1s forwards";
 }
 
 function displayNoneCart(){
@@ -553,6 +558,8 @@ function prebaciHOME(){
     let faq=document.getElementById("faqDio").style.display="none";
     let contact=document.getElementById("contactDio").style.display="none";
     let store=document.getElementById("storeDio").style.display="none";
+    let element=document.getElementById("elementDio").style.display="none"
+    
 }
 
 
@@ -561,6 +568,7 @@ function prebaciFAQ(){
     let faq=document.getElementById("faqDio").style.display="block";
     let contact=document.getElementById("contactDio").style.display="none";
     let store=document.getElementById("storeDio").style.display="none";
+    let element=document.getElementById("elementDio").style.display="none"
 }
 
 function prebaciContact(){
@@ -568,6 +576,7 @@ function prebaciContact(){
     let faq=document.getElementById("faqDio").style.display="none";
     let contact=document.getElementById("contactDio").style.display="flex";
     let store=document.getElementById("storeDio").style.display="none";
+    let element=document.getElementById("elementDio").style.display="none"
 }
 
 function zarotirajStrelicu(brojStrelice){

@@ -94,6 +94,7 @@ body{
     color:white;
     text-decoration: none;
     font-weight: bold;
+    font-size:1vw;
     font-family:Reggae One;
     padding-left:4vw;
     padding-top:1.3vw;
@@ -118,7 +119,7 @@ body{
 .pc .header #cijenaCart{
     color:rgb(97, 1, 1);
     position:absolute;
-    
+    font-size:1vw;
     right:9vw;
     top:.5vw;
     font-family: Reggae One;
@@ -157,6 +158,7 @@ body{
 
 .pc .background img{
     width:100vw;
+        height:100vh;
     
 }
 
@@ -561,6 +563,7 @@ body{
     color:rgb(226, 210, 68);
     font-family: Reggae One;
     padding-left:4vw;
+    font-size:1.2vw;
 }
 
 
@@ -571,6 +574,7 @@ body{
     color:rgb(97, 1, 1);
     font-family: Reggae One;
     font-weight: bold;
+    font-size:1vw;
 }
 
 .pc .pcCartBar .cartBarDugmici{
@@ -603,6 +607,7 @@ body{
 .pc .pcCartBar .cartBarDugmici .cancel p{
     font-family: Reggae One;
     color:white;
+    font-size:1vw;
     
 }
 
@@ -624,6 +629,7 @@ body{
 .pc .pcCartBar .cartBarDugmici .checkOut p{
     font-family: Reggae One;
     color:white;
+    font-size:1vw;
     
 }
 
@@ -648,6 +654,7 @@ body{
 
 .pc .pcCartBar .listaItema .cartItem .cijenaModela{
     margin-right:1vw;
+    font-size:1vw;
    
 }
 .pc .pcCartBar .listaItema .cartItem .cartX{
@@ -661,6 +668,7 @@ body{
 .pc .pcCartBar .listaItema .cartItem .imeModela{
     margin-left:1vw;
     width:13vw;
+    font-size:1vw;
 }
 
 .pc #addITEMS{
@@ -668,6 +676,7 @@ body{
     color:rgb(128, 0, 0);
     
     font-family: Reggae One;
+    font-size:1vw;
 }
     
 
@@ -972,7 +981,7 @@ body{
 .pc .storeDio .filter .dugmeTraka{
     background-color:rgb(102, 102, 102);
     position:absolute;
-    top:22.5vw;
+    transform:translateY(-.5vw);
     left:10vw;
     width:1.5vw;
     height:1.5vw;
@@ -982,7 +991,7 @@ body{
 .pc .storeDio .filter .dugmeTraka1{
     background-color:rgb(102, 102, 102);
     position:absolute;
-    top:22.5vw;
+    transform:translateY(-.5vw);
     left:28vw;
     width:1.5vw;
     height:1.5vw;
@@ -1025,6 +1034,7 @@ body{
     color:white;
     font-family:Reggae One;
     text-align:center;
+    cursor:pointer;
 }
 
 .pc .pcCrniDioNovi1 .element .opisElementa{
@@ -1083,3 +1093,108 @@ body{
 .pc .pcCrniDioNovi1 .element .dugmeKupide p{
     padding:.5vw;
 }
+
+.pc .elementDio{
+    background-color:black;
+    padding:2vw;
+    width:70vw;
+    margin-left:auto;
+    margin-right:auto;
+    display:none;
+    color:white;
+    font-family: Reggae One;
+    justify-content: space-between;
+}
+.pc .elementDio .elementDioOpis{
+    margin-left:2vw;
+    margin-top:5vw;
+    font-size:1vw;
+   
+}
+.pc .elementDio .elementDioOpis .dugmeKupide p{
+    font-size:1vw;
+}
+.pc .elementDio #elementDioCijena{
+    font-size:1.2vw;
+}
+.pc .elementDio .dugmeKupide{
+    color:white;
+    background-color:rgb(97, 1, 1);
+    width:15vw;
+    margin-top:5vw;
+    height:3vw;
+    align-items:center;
+    display:flex;
+    justify-content: center;  
+    font-family: Reggae One;
+    cursor:pointer;
+}
+
+.pc .elementDio .dugmeKupide:hover{
+    background-color:rgb(112, 1, 1); 
+
+}
+.pc .slikaElementDio img{
+    width:35vw;
+}
+.pc .slikaElementDio .manjeSlike img{
+    width:10vw;
+    margin-top:1vw;
+}
+
+.pc .elementDio .zoomSlika{
+    position:absolute;
+    
+    left:0;
+    z-index:10;
+    display:none;
+    width:100vw;
+    height:100vh;
+    background-color:black;
+    
+}
+.pc .elementDio .zoomSlika p{
+    font-size:3vw;
+    position:absolute;
+    right:4vw;
+    
+}
+.pc .elementDio .zoomSlika p:hover{
+    
+    color:rgb(112, 0, 0)
+}
+.pc .elementDio .zoomSlika img{
+    width:55vw;
+    height:70vh;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-right:auto;
+    margin-left:auto;
+
+}
+
+
+
+
+@media only screen and (max-width: 1400px) and (min-width:600px){ /*tablet*/
+    
+    .naslovHeader{
+        transform:translate(0,2vw)
+    }
+    .slikaHeader img{
+        width:100vw;
+        height:15vw;
+    }
+
+    #baloni {
+        display:none;
+    }
+    #katananaslov{
+        display:none;
+    }
+    .naslovTajmer{
+        transform:translate(0,2vw)
+    }
+    
+}
+

@@ -56,7 +56,7 @@
             <div class="pcCartBar">
                 <div class="logoIcijena">
                     <h2>JKS</h2>
-                    <p class="zbrojenaCijena">Price: 0$</p>
+                    <p id="zbrojenaCijena" class="zbrojenaCijena">Price: 0$</p>
                 </div>
                 <p class="addITEMS" id="addITEMS">Empty</p>
                 <div class="listaItema">
@@ -64,11 +64,11 @@
                 </div>
                 <div class="cartBarDugmici">
                     <div onclick="cancel()" class="cancel">
-                        <p>Cancel</p>
+                        <p>Close</p>
                     </div>
 
                     <div class="checkOut">
-                        <p>Checkout</p>
+                        <p>Proceed</p>
                     </div>
 
                 </div>
@@ -751,7 +751,7 @@
                     <div onmouseover="storeModelSlika(0)" onmouseout="storeModelSlikaR(0)" class="slikaElementa">
                         <img class="slikaElementaIMG" src="images/novekatane/1_1.jpg" alt="">
                     </div>
-                    <div onmouseover="storeModelSlika(0)" onmouseout="storeModelSlikaR(0)" class="animacijaElementa">
+                    <div onclick="prebaciElement(0)" onmouseover="storeModelSlika(0)" onmouseout="storeModelSlikaR(0)" class="animacijaElementa">
                         <p>QUICK VIEW</p>
                     </div>
                     <div class="opisElementa">
@@ -769,7 +769,7 @@
                     <div onmouseover="storeModelSlika(1)" onmouseout="storeModelSlikaR(1)" class="slikaElementa">
                         <img class="slikaElementaIMG" src="images/novekatane/2_1.jpg" alt="">
                     </div>
-                    <div onmouseover="storeModelSlika(1)" onmouseout="storeModelSlikaR(1)"  class="animacijaElementa">
+                    <div onclick="prebaciElement(1)" onmouseover="storeModelSlika(1)" onmouseout="storeModelSlikaR(1)"  class="animacijaElementa">
                         <p>QUICK VIEW</p>
                     </div>
                     <div class="opisElementa">
@@ -787,7 +787,7 @@
                     <div onmouseover="storeModelSlika(2)" onmouseout="storeModelSlikaR(2)" class="slikaElementa">
                         <img class="slikaElementaIMG" src="images/novekatane/3_1.jpg" alt="">
                     </div>
-                    <div onmouseover="storeModelSlika(2)" onmouseout="storeModelSlikaR(2)"  class="animacijaElementa">
+                    <div onclick="prebaciElement(2)" onmouseover="storeModelSlika(2)" onmouseout="storeModelSlikaR(2)"  class="animacijaElementa">
                         <p>QUICK VIEW</p>
                     </div>
                     <div class="opisElementa">
@@ -805,7 +805,7 @@
                     <div onmouseover="storeModelSlika(3)" onmouseout="storeModelSlikaR(3)" class="slikaElementa">
                         <img class="slikaElementaIMG" src="images/novekatane/4_1.jpg" alt="">
                     </div>
-                    <div onmouseover="storeModelSlika(3)" onmouseout="storeModelSlikaR(3)"  class="animacijaElementa">
+                    <div onclick="prebaciElement(3)" onmouseover="storeModelSlika(3)" onmouseout="storeModelSlikaR(3)"  class="animacijaElementa">
                         <p>QUICK VIEW</p>
                     </div>
                     <div class="opisElementa">
@@ -823,7 +823,7 @@
                     <div onmouseover="storeModelSlika(4)" onmouseout="storeModelSlikaR(4)"  class="slikaElementa">
                         <img class="slikaElementaIMG" src="images/novekatane/5_1.jpg" alt="">
                     </div>
-                    <div onmouseover="storeModelSlika(4)" onmouseout="storeModelSlikaR(4)" class="animacijaElementa">
+                    <div onclick="prebaciElement(4)" onmouseover="storeModelSlika(4)" onmouseout="storeModelSlikaR(4)" class="animacijaElementa">
                         <p>QUICK VIEW</p>
                     </div>
                     <div class="opisElementa">
@@ -841,7 +841,7 @@
                     <div onmouseover="storeModelSlika(5)" onmouseout="storeModelSlikaR(5)"  class="slikaElementa">
                         <img class="slikaElementaIMG" src="images/novekatane/6_1.jpg" alt="">
                     </div>
-                    <div onmouseover="storeModelSlika(5)" onmouseout="storeModelSlikaR(5)" class="animacijaElementa">
+                    <div onclick="prebaciElement(5)" onmouseover="storeModelSlika(5)" onmouseout="storeModelSlikaR(5)" class="animacijaElementa">
                         <p>QUICK VIEW</p>
                     </div>
                     <div class="opisElementa">
@@ -859,7 +859,7 @@
                     <div onmouseover="storeModelSlika(6)" onmouseout="storeModelSlikaR(6)"  class="slikaElementa">
                         <img class="slikaElementaIMG" src="images/novekatane/7_1.jpg" alt="">
                     </div>
-                    <div onmouseover="storeModelSlika(6)" onmouseout="storeModelSlikaR(6)"  class="animacijaElementa">
+                    <div onclick="prebaciElement(6)" onmouseover="storeModelSlika(6)" onmouseout="storeModelSlikaR(6)"  class="animacijaElementa">
                         <p>QUICK VIEW</p>
                     </div>
                     <div class="opisElementa">
@@ -877,7 +877,7 @@
                     <div onmouseover="storeModelSlika(7)" onmouseout="storeModelSlikaR(7)"  class="slikaElementa">
                         <img class="slikaElementaIMG" src="images/novekatane/8_1.jpg" alt="">
                     </div>
-                    <div onmouseover="storeModelSlika(7)" onmouseout="storeModelSlikaR(7)"  class="animacijaElementa">
+                    <div onclick="prebaciElement(7)" onmouseover="storeModelSlika(7)" onmouseout="storeModelSlikaR(7)"  class="animacijaElementa">
                         <p>QUICK VIEW</p>
                     </div>
                     <div class="opisElementa">
@@ -895,7 +895,7 @@
                     <div onmouseover="storeModelSlika(8)" onmouseout="storeModelSlikaR(8)"  class="slikaElementa">
                         <img class="slikaElementaIMG" src="images/novekatane/9_1.jpg" alt="">
                     </div>
-                    <div onmouseover="storeModelSlika(8)" onmouseout="storeModelSlikaR(8)"  class="animacijaElementa">
+                    <div onclick="prebaciElement(8)" onmouseover="storeModelSlika(8)" onmouseout="storeModelSlikaR(8)"  class="animacijaElementa">
                         <p>QUICK VIEW</p>
                     </div>
                     <div class="opisElementa">
@@ -913,7 +913,7 @@
                     <div onmouseover="storeModelSlika(9)" onmouseout="storeModelSlikaR(9)"  class="slikaElementa">
                         <img class="slikaElementaIMG" src="images/novekatane/10_1.jpg" alt="">
                     </div>
-                    <div onmouseover="storeModelSlika(9)" onmouseout="storeModelSlikaR(9)"  class="animacijaElementa">
+                    <div onclick="prebaciElement(9)" onmouseover="storeModelSlika(9)" onmouseout="storeModelSlikaR(9)"  class="animacijaElementa">
                         <p>QUICK VIEW</p>
                     </div>
                     <div class="opisElementa">
@@ -931,7 +931,7 @@
                     <div onmouseover="storeModelSlika(10)" onmouseout="storeModelSlikaR(10)"  class="slikaElementa">
                         <img class="slikaElementaIMG" src="images/novekatane/11_1.jpg" alt="">
                     </div>
-                    <div onmouseover="storeModelSlika(10)" onmouseout="storeModelSlikaR(10)"  class="animacijaElementa">
+                    <div onclick="prebaciElement(10)" onmouseover="storeModelSlika(10)" onmouseout="storeModelSlikaR(10)"  class="animacijaElementa">
                         <p>QUICK VIEW</p>
                     </div>
                     <div class="opisElementa">
@@ -949,7 +949,7 @@
                     <div onmouseover="storeModelSlika(11)" onmouseout="storeModelSlikaR(11)"  class="slikaElementa">
                         <img class="slikaElementaIMG" src="images/novekatane/12_1.jpg" alt="">
                     </div>
-                    <div onmouseover="storeModelSlika(11)" onmouseout="storeModelSlikaR(11)"  class="animacijaElementa">
+                    <div onclick="prebaciElement(11)" onmouseover="storeModelSlika(11)" onmouseout="storeModelSlikaR(11)"  class="animacijaElementa">
                         <p>QUICK VIEW</p>
                     </div>
                     <div class="opisElementa">
@@ -965,11 +965,34 @@
             </div>
             
         </div>
+        <div id="elementDio" class="elementDio">
+            <div class="slikaElementDio">
+                <img onclick="zoomINslika()" id="elementDioSlika" src="images/novekatane/1_1.jpg" alt="">
+                <div class="manjeSlike">
+                    <img onclick="izminiManjeSlike(0)" id="manjaSlika1" src="images/novekatane/1_1.jpg" alt="">
+                    <img onclick="izminiManjeSlike(1)" id="manjaSlika2" src="images/novekatane/1_2.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="elementDioOpis">
+                <h2 id="elementDioIme">Neko IME ELEMENTA</h2>
+                <p id="elementDioCijena">0$</p>
+                <div  class="dugmeKupide">
+                    <p onclick="dodajItemStore()" class="addToCart">ADD TO CART</p>
+                </div>
+            </div>
+
+            <div class="zoomSlika">
+                <img src="images/novekatane/1_1.jpg" alt="">
+                <p onclick="zoomOUTslika()">X</p>
+            </div>
+        </div>
         <div class="footer">
             <p>Copyright 2021 © JojoKatanaShop.com. Powered by 64.com</p>
         </div>
 
-        <!--GOTOV INDEX DIZAJN -->
+        
+        
 
         
 
