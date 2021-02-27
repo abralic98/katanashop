@@ -268,7 +268,7 @@ body{
     display:flex;
     margin-left:auto;
     margin-right:auto;
-    
+    justify-content: space-between;
     flex-wrap:wrap;
 }
 
@@ -505,6 +505,7 @@ body{
     text-align: center;
     font-family: Reggae One;
     color:white;
+    font-size:1vw;
 }
 
 .pc .whyUs .whatToExpect #pWhatToExpect{
@@ -1111,40 +1112,24 @@ body{
     font-size:1vw;
    
 }
-.pc .elementDio .elementDioOpis .dugmeKupide p{
-    font-size:1vw;
-}
+
 .pc .elementDio #elementDioCijena{
     font-size:1.2vw;
 }
-.pc .elementDio .dugmeKupide{
-    color:white;
-    background-color:rgb(97, 1, 1);
-    width:15vw;
-    margin-top:5vw;
-    height:3vw;
-    align-items:center;
-    display:flex;
-    justify-content: center;  
-    font-family: Reggae One;
-    cursor:pointer;
-}
 
-.pc .elementDio .dugmeKupide:hover{
-    background-color:rgb(112, 1, 1); 
-
-}
 .pc .slikaElementDio img{
     width:35vw;
+    cursor:pointer;
 }
 .pc .slikaElementDio .manjeSlike img{
     width:10vw;
     margin-top:1vw;
+    cursor:pointer;
 }
 
 .pc .elementDio .zoomSlika{
-    position:absolute;
-    
+    position:fixed;
+    top:0;
     left:0;
     z-index:10;
     display:none;
@@ -1170,6 +1155,29 @@ body{
     margin-bottom:auto;
     margin-right:auto;
     margin-left:auto;
+    cursor:pointer;
+
+}
+
+.pc .elementDio .elementDioOpis .dugmeKupide5 p{
+    font-size:1vw;
+}
+
+.pc .elementDio .dugmeKupide5{
+    color:white;
+    background-color:rgb(97, 1, 1);
+    width:15vw;
+    margin-top:5vw;
+    height:3vw;
+    align-items:center;
+    display:flex;
+    justify-content: center;  
+    font-family: Reggae One;
+    cursor:pointer;
+}
+
+.pc .elementDio .dugmeKupide5:hover{
+    background-color:rgb(112, 1, 1); 
 
 }
 
@@ -1195,6 +1203,8 @@ body{
     .naslovTajmer{
         transform:translate(0,2vw)
     }
+    
+    
     
 }
 

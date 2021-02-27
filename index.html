@@ -609,21 +609,21 @@
             <div class="kontakt">
                 <div class="ime">
                     <p>Your Name (required)</p>
-                    <input class="inputContact" type="text">
+                    <input id="inputName" class="inputContact" type="text">
                 </div>
                 <div class="ime">
                     <p>Your Email (required)</p>
-                    <input class="inputContact" type="text">
+                    <input id="inputMejl" class="inputContact" type="text">
                 </div>
                 <div class="ime">
                     <p>Subject</p>
-                    <input class="inputContact" type="text">
+                    <input id="inputSubject"class="inputContact" type="text">
                 </div>
                 <div class="ime">
                     <p>Your Message</p>
-                    <input class="inputContactMSG" type="text">
+                    <input id="inputPoruka" class="inputContactMSG" type="text">
                 </div>
-                <div class="dugmeSend">
+                <div onclick="sendMail()" class="dugmeSend">
                     <p>Send</p>
                 </div>
             </div>
@@ -633,44 +633,44 @@
                 <div class="kontakVrstaItema">
                     <h2>SAMURAI SWORDS</h2>
                 </div>
-                <div class="kontaktImeItema">
+                <div onclick="contactStore(0)" class="kontaktImeItema">
                     <p>Katana</p>
                     <div class="itemLinija"></div>
                 </div>
-                <div class="kontaktImeItema">
+                <div onclick="contactStore(1)" class="kontaktImeItema">
                     <p>Wakizashi</p>
                     <div class="itemLinija"></div>
                 </div>
-                <div class="kontaktImeItema">
+                <div onclick="contactStore(2)"class="kontaktImeItema">
                     <p>Tanto</p>
                     <div class="itemLinija"></div>
                 </div>
-                <div class="kontaktImeItema">
+                <div onclick="contactStore(3)" class="kontaktImeItema">
                     <p>Tachi</p>
                     <div class="itemLinija"></div>
                 </div>
-                <div class="kontaktImeItema">
+                <div onclick="contactStore(4)" class="kontaktImeItema">
                     <p>Shirasaya</p>
                     <div class="itemLinija"></div>
                 </div>
-                <div class="kontaktImeItema">
+                <div onclick="contactStore(5)" class="kontaktImeItema">
                     <p>Nodachi</p>
                     <div class="itemLinija"></div>
                 </div>
-                <div class="kontaktImeItema">
+                <div onclick="contactStore(6)" class="kontaktImeItema">
                     <p>Nagamaki</p>
                     <div class="itemLinija"></div>
                 </div>
-                <div class="kontaktImeItema">
+                <div onclick="contactStore(7)" class="kontaktImeItema">
                     <p>Nigata</p>
                     <div class="itemLinija"></div>
                 </div>
 
                 <h2 id="socialMedia">Social Media</h2>
                 <div class="drustvene">
-                    <img src="images/yt.webp" alt="">
-                    <img src="images/face.png" alt="">
-                    <img src="images/instagram.png" alt="">
+                    <img onclick="window.location.href='https://www.youtube.com/watch?v=3cxygMy4ajI';" src="images/yt.webp" alt="">
+                    <img onclick="window.location.href='https://www.youtube.com/watch?v=3cxygMy4ajI';"src="images/face.png" alt="">
+                    <img onclick="window.location.href='https://www.instagram.com/forgedinfire/?hl=hr';" src="images/instagram.png" alt="">
                 </div>
                 
             </div>
@@ -977,13 +977,13 @@
             <div class="elementDioOpis">
                 <h2 id="elementDioIme">Neko IME ELEMENTA</h2>
                 <p id="elementDioCijena">0$</p>
-                <div  class="dugmeKupide">
-                    <p onclick="dodajItemStore()" class="addToCart">ADD TO CART</p>
+                <div  class="dugmeKupide5">
+                    <p onclick="dodajItemStoreZoom()" class="addToCart">ADD TO CART</p>
                 </div>
             </div>
 
             <div class="zoomSlika">
-                <img src="images/novekatane/1_1.jpg" alt="">
+                <img id="zoomINslika" src="images/novekatane/1_1.jpg" alt="">
                 <p onclick="zoomOUTslika()">X</p>
             </div>
         </div>
@@ -1002,5 +1002,7 @@
     <script src="js/slajder.js"></script>
     <script src="js/index.js"></script>
     <script src="js/store.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
 </body>
 </html>

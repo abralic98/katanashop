@@ -70,27 +70,26 @@ function prebaciElement(broj){
 function izminiManjeSlike(broj){
     let manjaSlika1=document.getElementById("manjaSlika1");
     let manjaSlika2=document.getElementById("manjaSlika2");
-
+    let zoomINslika=document.getElementById("zoomINslika");
     let novaSlika=document.getElementById("elementDioSlika");
    
     if(broj==0){
         novaSlika.src=manjaSlika1.src;
+        zoomINslika.src=manjaSlika1.src;
     }
     if(broj==1){
         novaSlika.src=manjaSlika2.src;
+        zoomINslika.src=manjaSlika2.src;
     }
 }
 
 function zoomINslika(){
-    let novaSlika=document.getElementById("elementDioSlika");
     let zoomBlok=document.getElementsByClassName("zoomSlika");
-   
     zoomBlok[0].style.display="flex"
 }
 function zoomOUTslika(){
-    let novaSlika=document.getElementById("elementDioSlika");
     let zoomBlok=document.getElementsByClassName("zoomSlika");
-    
+
     zoomBlok[0].style.display="none"
 }
 function prebaciStore(){
@@ -1251,6 +1250,133 @@ function obrisiItemStore(brojItema,cena){
     finalnaCijena[0].innerHTML="$"+cijenaUkupnoStore;
     headerCijena.innerHTML="$"+cijenaUkupnoStore;
     
+}
+
+// zoom cart
+
+function dodajItemStoreZoom(){
+    brojItemaArrayStore++;
+    let noviHTML;
+    let ime=document.getElementById("elementDioIme");
+    let cijena=document.getElementById("elementDioCijena");
+    let editovanje=document.getElementsByClassName("listaItema"); //cili blok
+    let empty=document.getElementsByClassName("addITEMS");
+    let finalnaCijena=document.getElementsByClassName("zbrojenaCijena");
+    let headerCijena=document.getElementById("cijenaCart");
+    empty[0].innerHTML="ITEMS: "+brojItemaArrayStore;
+    
+    let stariHTML=editovanje[0].innerHTML;   
+    
+    
+    let objekt=new item(ime.innerHTML,cijena.innerHTML);
+    items.push(objekt)
+    console.log(items);
+    let cijenaBez$; 
+    cijenaBez$=cijena.innerHTML.substring(1);
+    for(let i=0; i<items.length; i++){
+        noviHTML=stariHTML+
+    `<div class="cartItem">
+        <p class="imeModela">${items[i].ime}</p>
+        <div class="cartLinija">
+        </div>
+        <p class="cijenaModela">${items[i].cijena}</p>
+        <div onclick="obrisiItemStore(${i},${items[i].cijena.substring(1)})"class="cartX">
+            <p> X </p> 
+        </div>
+    </div>`;
+    //console.log(items[i].ime)
+    //console.log(brojItema)
+    //console.log(noviHTML)
+    //console.log("broj puta: "+i)
+    }
+    
+    //console.log(noviHTML)
+    editovanje[0].innerHTML=noviHTML;   
+    cijenaUkupnoStore=Number(cijenaUkupnoStore)+Number(cijenaBez$);
+    finalnaCijena[0].innerHTML="$"+cijenaUkupnoStore;
+    headerCijena.innerHTML="$"+cijenaUkupnoStore;
+    console.log(items.length)
+    
+}
+
+function obrisiItemStoreZoom(brojItema,cena){
+    brojItemaArrayStore--
+    let noviHTML;
+    let ime=document.getElementsByClassName("opisElementaP");
+    let cijena=document.getElementsByClassName("cijenaElementaP");
+    let editovanje=document.getElementsByClassName("listaItema");
+    let empty=document.getElementsByClassName("addITEMS");
+    let finalnaCijena=document.getElementsByClassName("zbrojenaCijena");
+    let headerCijena=document.getElementById("cijenaCart");
+    
+    empty[0].innerHTML="ITEMS: "+brojItemaArrayStore;
+    
+    let stariHTML="";   
+    
+    if(brojItema>-1){
+        items.splice(brojItema,1)
+    }
+    console.log(items)
+    let cijenaBez$; 
+    
+    cijenaBez$=cijena[brojItema].innerHTML.substring(1);
+    //console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG")
+    //console.log(items.length)
+    for(let i=0; i<items.length; i++){
+        stariHTML=stariHTML+
+    `<div class="cartItem">
+        <p class="imeModela">${items[i].ime}</p>
+        <div class="cartLinija">
+        </div>
+        <p class="cijenaModela">${items[i].cijena}</p>
+        <div onclick="obrisiItemStore(${i},${items[i].cijena.substring(1)})"class="cartX">
+            <p> X </p> 
+        </div>
+    </div>`;
+    //console.log(items[i].ime)
+    //console.log(brojItema)
+    //console.log(noviHTML)
+    //console.log("broj puta: "+i)
+    
+    }
+    
+    cijenaBez$=cena;
+    
+    //console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG NAKON PETLJE")
+    editovanje[0].innerHTML=stariHTML;   
+    console.log("CENA "+cena)
+    cijenaUkupnoStore=Number(cijenaUkupnoStore)-Number(cijenaBez$);
+    finalnaCijena[0].innerHTML="$"+cijenaUkupnoStore;
+    headerCijena.innerHTML="$"+cijenaUkupnoStore;
+    
+}
+
+
+//iz contacta da prebaci samo na store kad stisnem npr katanu prvenstveno je trebalo da kad stisnem samo katane da mi u store izadju samo katane
+//al posto nisam radia na optimalan nacin klase elemenata to nije moguce pa nek stoji ovako sad
+
+function contactStore(broj){
+    prebaciStore();
+}
+
+//email smptjs
+function sendMail(){
+    let ime=document.getElementById("inputName").value;
+    let mejl=document.getElementById("inputMejl").value;
+    let poruka=document.getElementById("inputPoruka").value;
+    let naslov=document.getElementById("inputSubject").value;
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "jojokatanashop@gmail.com",
+        Password : "k3ch3ri619",
+        To : mejl,
+        From : "jojokatanashop@gmail.com",
+        Subject : "Your Delivery",
+        Body : `Pozdrav ${ime} Primili smo narudzbu-- ${poruka}-- dobices kurac,
+        Greetings from CrnogoracIzBrckog.org `
+    }).then(
+      message => alert("PogledajderMejl")
+    );
 }
 
 
