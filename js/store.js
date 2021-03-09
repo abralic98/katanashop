@@ -1,7 +1,7 @@
 // STORE ANIMACIJE
 //broj je paramatar u htmlu koji je element kliknut 
 //broj2 je parametar vrste metala 0 je default kad stisnes store;
-let brojElementa; 
+let brojElementa=0; 
 //0 default
 //1 1060 modeli
 
@@ -67,6 +67,80 @@ function prebaciElement(broj){
   
 }
 
+function prebaciElement1(broj){
+    let element=document.getElementById("elementDio").style.display="flex"
+    let home=document.getElementById("homeDio").style.display="none";
+    let faq=document.getElementById("faqDio").style.display="none";
+    let contact=document.getElementById("contactDio").style.display="none";
+    let store=document.getElementById("storeDio").style.display="none";
+
+    let ime=document.querySelectorAll(".pcCrniDioNovi .element .opisElementa .opisElementaP"); //ime elementa  KOJEG KLIKNEMO u store
+    let cijena=document.querySelectorAll(".pcCrniDioNovi .element .cijenaElementa .cijenaElementaP"); //cijena elementa KOJEG KLIKNEMO u store
+    let slika=document.querySelectorAll(".pcCrniDioNovi .element .slikaElementa .slikaElementaIMG"); //slika element KOJEGKLIKNEMO u store
+
+    let novoIme=document.getElementById("elementDioIme");
+    let novaSlika=document.getElementById("elementDioSlika");
+    let novaCijena=document.getElementById("elementDioCijena");
+
+    let manjaSlika1=document.getElementById("manjaSlika1");
+    let manjaSlikka2=document.getElementById("manjaSlika2");
+
+    //minjanje slika kad stisnem na neki element 
+    if(broj==0){
+        manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
+        manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
+    }
+    if(broj==1){
+        manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
+        manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
+    }
+    if(broj==2){
+        manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
+        manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
+    }
+    if(broj==3){
+        manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
+        manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
+    }
+    if(broj==4){
+        manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
+        manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
+    }
+    if(broj==5){
+        manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
+        manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
+    }
+    if(broj==6){
+        manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
+        manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
+    }
+    if(broj==7){
+        manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
+        manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
+    }
+    if(broj==8){
+        manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
+        manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
+    }
+    if(broj==9){
+        manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
+        manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
+    }
+    if(broj==10){
+        manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
+        manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
+    }
+    if(broj==8){
+        manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
+        manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
+    }
+    
+    novoIme.innerHTML=ime[broj].innerHTML;
+    novaSlika.src=slika[broj].src;
+    novaCijena.innerHTML=cijena[broj].innerHTML;
+  
+}
+
 function izminiManjeSlike(broj){
     let manjaSlika1=document.getElementById("manjaSlika1");
     let manjaSlika2=document.getElementById("manjaSlika2");
@@ -111,6 +185,7 @@ function prebaciStore(){
 
 function pozoviKlasuItema(broj,brojItema){//broj je 1 2 3..> koju klasu sam izabra brojItema je parametar iz htmla koliko itema ima u toj klasi
     brojElementa=broj;//broj klase
+    
     let slika=document.querySelectorAll(".pcCrniDioNovi1 .element .slikaElementa .slikaElementaIMG"); //slika element
     let dugme=document.querySelectorAll(".pcCrniDioNovi1 .element .animacijaElementa"); // crveno dugme element
     let ime=document.querySelectorAll(".pcCrniDioNovi1 .element .opisElementa .opisElementaP"); //ime elementa
@@ -1372,8 +1447,8 @@ function sendMail(){
         To : mejl,
         From : "jojokatanashop@gmail.com",
         Subject : "Your Delivery",
-        Body : `Pozdrav ${ime} Primili smo narudzbu-- ${poruka}-- dobices kurac,
-        Greetings from CrnogoracIzBrckog.org `
+        Body : `Pozdrav ${ime} Primili smo narudzbu-- ${poruka}-- stize za 2 dana,
+        jojokatanashop.com`
     }).then(
       message => alert("PogledajderMejl")
     );

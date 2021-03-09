@@ -424,13 +424,14 @@ let cijenaUkupno=0;
 
 function dodajItem(brojItema){
     brojItemaArray++;
+    brojItemaArrayStore++;
     let noviHTML
     let ime=document.getElementsByClassName("opisElementaP");
     let cijena=document.getElementsByClassName("cijenaElementaP");
     let editovanje=document.getElementsByClassName("listaItema"); //cili blok
     let empty=document.getElementsByClassName("addITEMS");
     let finalnaCijena=document.getElementsByClassName("zbrojenaCijena");
-    let headerCijena=document.getElementById("cijenaCart");
+    let headerCijena=document.getElementsByClassName("cijenaCart");
     
    
     
@@ -467,7 +468,8 @@ function dodajItem(brojItema){
     editovanje[0].innerHTML=noviHTML;   
     cijenaUkupno=Number(cijenaUkupno)+Number(cijenaBez$);
     finalnaCijena[0].innerHTML="$"+cijenaUkupno;
-    headerCijena.innerHTML="$"+cijenaUkupno;
+    headerCijena[0].innerHTML="$"+cijenaUkupno;
+    headerCijena[1].innerHTML="$"+cijenaUkupno;
     console.log(items.length)
     
 }
@@ -480,7 +482,7 @@ function obrisiItem(brojItema,cena){
     let editovanje=document.getElementsByClassName("listaItema");
     let empty=document.getElementsByClassName("addITEMS");
     let finalnaCijena=document.getElementsByClassName("zbrojenaCijena");
-    let headerCijena=document.getElementById("cijenaCart");
+    let headerCijena=document.getElementsByClassName("cijenaCart");
     
     empty[0].innerHTML="ITEMS: "+brojItemaArray;
     
@@ -520,7 +522,8 @@ function obrisiItem(brojItema,cena){
     cijenaUkupno=Number(cijenaUkupno)-Number(cijenaBez$);
     console.log(cijenaUkupno);
     finalnaCijena[0].innerHTML="$"+cijenaUkupno;
-    headerCijena.innerHTML="$"+cijenaUkupno;
+    headerCijena[0].innerHTML="$"+cijenaUkupno;
+    headerCijena[1].innerHTML="$"+cijenaUkupno;
     
 }
 let items=[];
@@ -554,12 +557,8 @@ function displayNoneCart(){
 let brojrotiranja=-1;
 
 function prebaciHOME(){
-    let home=document.getElementById("homeDio").style.display="block";
-    let faq=document.getElementById("faqDio").style.display="none";
-    let contact=document.getElementById("contactDio").style.display="none";
-    let store=document.getElementById("storeDio").style.display="none";
-    let element=document.getElementById("elementDio").style.display="none"
     
+    location.reload(); 
 }
 
 
@@ -606,6 +605,8 @@ function zarotirajStrelicu(brojStrelice){
     }
   
 }
+
+
 
 
 

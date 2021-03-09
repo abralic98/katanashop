@@ -4,6 +4,22 @@ body{
     overflow-x: hidden;
     
     
+    
+}
+.desniBarFilter{
+    display:none;
+}
+.fonCartBar{
+    display:none;
+}
+.velikaSlika{
+    display:none;
+}
+.fon{
+    display:none;
+}
+.desnimenufon{
+    display:none;
 }
 
 .pc .slikaHeaderSve .slikaHeader{
@@ -170,6 +186,7 @@ body{
     align-items:center;
     height:16vw;
     margin-left:19vw;
+    cursor:pointer;
     
 }
 
@@ -193,10 +210,12 @@ body{
 
 .pc .strelicaSlajd .livo img{
     transform:translate(14vw,7vw) rotate(90deg) ;
+    cursor:pointer;
 }
 
 .pc .strelicaSlajd .desno img{
     transform:translate(83vw,4vw) rotate(270deg) ;
+    cursor:pointer;
 }
 
 .pc .slajder .slide .slidecrno{
@@ -216,7 +235,7 @@ body{
     color:rgb(97, 1, 1);
     font-family: Reggae One;
     font-weight:bold;
-    padding-left:3vw;
+    padding-left:2vw;
     position:absolute;
     padding-top:1vw;
     font-size:1.2vw;
@@ -228,9 +247,10 @@ body{
     color:rgb(255, 255, 255);
     font-family: Reggae One;
     font-weight:bold;
-    padding-left:3vw;
+    padding-left:2vw;
     position:absolute;
     padding-top:4vw;
+    font-size:1.2vw;
     
 }
 
@@ -277,15 +297,13 @@ body{
 .pc .pcCrniDioNovi .element{
     padding:.5vw;
     width:16vw;
-    font-size:1vw;
-    
+    font-size:1vw;   
 }
-
-
 
 .pc .pcCrniDioNovi .element .slikaElementa img {
     z-index:1;
     width:16vw;
+    cursor:pointer;
     
 }
 .pc .pcCrniDioNovi .element .animacijaElementa{
@@ -298,6 +316,7 @@ body{
     color:white;
     font-family:Reggae One;
     text-align:center;
+    cursor:pointer;
 }
 
 .pc .pcCrniDioNovi .element .opisElementa{
@@ -741,6 +760,11 @@ body{
     height:.1vw;
     background-color:white;
 }
+.pc .faqDio .pitanja .pitanjaLinija1{
+    width:76vw;
+    height:.1vw;
+    background-color:white;
+}
 .pc .faqDio .pitanja .odgovor{
     display:none;
 }
@@ -1023,6 +1047,7 @@ body{
 .pc .pcCrniDioNovi1 .element .slikaElementa img {
     z-index:1;
     width:16vw;
+    cursor:pointer;
     
 }
 .pc .pcCrniDioNovi1 .element .animacijaElementa{
@@ -1203,7 +1228,532 @@ body{
     .naslovTajmer{
         transform:translate(0,2vw)
     }
+
+}
+@media only screen and (max-width: 600px) {
+    .pc{
+        display:none;
+    }
+    body{
+        background-color: black;
+    }
+    .fon{
+        background-color:rgb(12, 12, 12);
+        width:100vw;
+        height:100vh;
+        display:block;
+    }
+    .fon .fonHeader{
+        background-color:black;
+        display:flex;
+        justify-content: space-around;
+        align-items:center;
+        position:fixed;
+        top:0;
+        width:100vw;
+        z-index:101;
+    }
+    .fon .fonHeader p{
+        color:rgb(226, 210, 68);
+        font-family: Reggae One;
+        font-size:5vw;  
+        font-weight:bold;
+        
+    }
+    .fon .fonHeader img{
+        width:15vw;
+    }
+    .fon #cijenaCartFon{
+        color:rgb(97, 1, 1);
+        font-size:4vw;
+        font-weight:normal;
+        
+    }
+    .fon .kategorije{
+        display:flex;
+        justify-content: center;
+        align-items:center;
     
+    }
+    
+    .fon .kategorije .linija{
+        width:15vw;
+        height:.1vw;
+        background-color:white;
+        margin-left:2vw;
+        margin-right:2vw;
+    }
+    
+    .fon .kategorije p{
+        color:white;
+        font-family:Reggae One;
+        font-size:3.5vw;
+    }
+    /* SWIPER*/ 
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-top:7vw;
+      }
+  
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+  
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .swiper-slide img{
+          width:100vw;
+      }
+    
+    .fon .swiper-opis{
+        background-color:rgb(12, 12, 12);
+        color:white;
+        font-family: Reggae One;
+    }
+    .fon .fonHome{
+        background-color:rgb(12, 12, 12);
+    }
+    .fon .fonQuickView{
+        background-color:rgb(97, 1, 1);
+        width:80vw;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    
+    .fon .fonQuickView p{
+        font-family: Reggae One;
+        padding:1vw;
+        color:white;
+    }
+    .fon .fonCrniDioNovi{
+        background-color:rgb(12, 12, 12);
+        
+    }
+    .fon .fonCrniDioNovi .element{
+        display:flex;
+        width:80vw;
+        flex-direction: column;
+        justify-content: center;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:5vw;
+    }
+    .fon .fonCrniDioNovi .element img{
+        width:80vw;
+    }
+    .fon .fonCrniDioNovi .element p{
+        color:white;
+        font-family: Reggae One;
+    }
+    .fonCrniDioNovi .element .dugmeKupide{
+        color:white;
+        background-color:rgb(97, 1, 1);
+        text-align:center;
+        width:50vw;
+        
+        margin-left:auto;
+        margin-right:auto;  
+        font-family: Reggae One;
+        cursor:pointer;
+        font-size:3vw;
+        margin-bottom:5vw;
+    }
+    
+    .whyUs{
+        width:100vw;
+        background-color:rgb(12, 12, 12);
+    }
+    
+    .whyUs p{
+        color:white;
+        font-family: Reggae One;
+        font-size: 3vw;
+        padding:5vw;
+
+    }
+    
+     .whyUs .slikeWhyUs{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-left:2vw;
+        padding-right:2vw;
+        margin-left:auto;
+        margin-right:auto;
+    
+    }
+    
+    .whyUs .slikeWhyUs img{
+        width:90vw;
+        margin-left:3vw;
+        
+        
+    }
+     .whyUs .slikeWhyUs .slikaOpis{
+        margin-top:2vw;
+        
+       
+    }
+    
+    .whyUs .slikeWhyUs .slikaOpis p{
+        color:white;
+        font-family: Reggae One;
+        font-size:3vw;
+        position:relative;
+        text-align: center;
+    }
+
+     .whyUs .slikeWhyUs .slikaOpis h2{
+        color:white;
+        font-family: Reggae One;
+        font-size:5vw;
+        text-align: center;
+    }
+    
+    .whyUs .review {
+        display:flex;
+        flex-direction: column;
+        margin-top:2vw;
+    }
+    
+    .whyUs .review .reviews .stars{
+        display:Flex;
+        justify-content: center;
+    }
+    .whyUs .review .reviews .stars .star{
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        background-color:red;
+        width:5vw;
+        height:5vw;
+    }
+    
+     .whyUs .review .reviews{
+        text-align: center;
+        font-family: Reggae One;
+        color:white;
+        font-size:3vw;
+    }
+    
+    .whyUs .whatToExpect #pWhatToExpect{
+        padding-left:5vw;
+        padding-right:5vw;
+        margin-top:-.5vw;
+    }
+
+    .fon .footer {
+        background-color:black;
+    }
+
+
+
+    /* DESNI MENU FON */ 
+
+    @keyframes livoNestani{
+        0%{transform:translate(0vw,0vw)}
+        100%{transform:translate(-100vw,0vw)}
+    }
+    @keyframes livoStvoriSe{
+        0%{transform:translate(-100vw,0vw)}
+        100%{transform:translate(0vw,0vw)}
+    }
+    @keyframes desnoStvoriSe{
+        0%{transform:translate(100vw,0vw)}
+        100%{transform:translate(0vw,0vw)}
+    }
+    @keyframes desnoNestani{
+        0%{transform:translate(0vw,0vw)}
+        100%{transform:translate(100vw,0vw)}
+    }
+   
+
+    .desnimenufon{
+        background-color: black;
+        width:80vw;
+        display:none;
+        position: fixed;
+        top:0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height:80vh;
+        border:10vw solid transparent;
+        border-image: url("/images/test.png") 1 500 round; /* ovo triba neko objasnit nemam pojma kako radi ali je ok sad ovako*/
+       
+    }
+    .desnimenufon p{
+        color:white;
+        font-family: Reggae One;
+        font-size:5vw; 
+    }
+    .desnimenufon h2{
+        color:rgb(226, 210, 68);
+        font-family: Reggae One;
+        font-size:9vw; 
+    }
+
+    /* FAQ FON */
+
+    .fon .fonFAQ{
+        display:none;
+        background-color: rgb(12, 12, 12);
+        align-items:center;
+        justify-content: center;
+        flex-direction: column;
+        padding:5vw;
+    }
+    .fon .fonFAQ .faqStrelica1{
+        width:8vw;
+        height:8vw;
+    }
+    .fon .fonFAQ .pitanje h2{
+        color:white;
+        font-family: Reggae One;
+        text-align: center;
+        font-size:5vw;
+    }
+    .fon .fonFAQ .odgovor1{
+        display:none;
+    }
+    .fon .fonFAQ .odgovor1 p{
+        color:rgb(114, 0, 0);
+        font-family: Reggae One;
+        text-align: center;
+        
+    }
+    .fon .fonFAQ .pitanje{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+    }
+
+    /* CONTACT DIO */
+    .fon .fonContact{
+        margin-top:20vw;
+        display:none;
+        width:100vw;
+        height:100vh;
+        background-color: rgb(12, 12, 12);
+    }
+    .fon .kontakt .ime p{
+        font-family: Reggae One;
+        font-size:5vw;
+        color:white;
+        text-align: center;
+        padding-top:1vw;
+        cursor:pointer;
+        
+    }
+    .fon .fonContact .kontakt input{
+        font-family: Reggae One;
+        font-size:5vw;
+        color:black;
+        width:90vw;
+        height:8vw;
+        margin-left:4vw;
+    }
+    .fon .fonContact .dugmeSend{   
+        background-color:rgb(97, 1, 1);
+        display:flex; 
+        cursor:pointer;
+        width:90vw;
+        border-radius:5vw;
+        margin-left:auto;
+        margin-top:10vw;
+        margin-right:auto;
+        align-items: center;
+        justify-content: center;
+        color:white;
+        font-size:4vw;
+        font-family: Reggae One;
+    }
+    .fon .fonContact .drustvene{
+        display:flex;
+        margin-top:10vw;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .fon .fonContact .drustvene img{
+        width:13vw;
+    }
+    .fon .fonContact .drustvene img:nth-child(1){
+        height:10vw;
+    }
+    
+    .fon .fonStore{
+        display:none;
+    }
+    .fon .fonStore .fonFilter {
+        width:100vw;
+        height:15vw;
+        margin-top:22vw;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+    }
+    .fon .fonStore .fonFilter p{
+        color:rgb(112, 0, 0);
+        font-family: Reggae One;
+        font-size:5vw;
+    }
+    .desniBarFilter{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width:100vw;
+
+    }
+    .desniBarFilter .klasaSteel1{
+        display:flex;
+        align-items:center;
+        
+    }
+    .desniBarFilter .klasaSteel1 h4{
+        color:white;
+        font-family: Reggae One;
+    }
+    .desniBarFilter .klasaSteel1 p{
+        color:rgb(65, 65, 65);
+        font-family: Reggae One;
+        font-size:3vw;
+        margin-left:5vw;
+    }
+    .desniBarFilter h1{
+        color:rgb(112, 0, 0);
+        font-family: Reggae One;
+        margin-top:10vw;
+    }
+
+    .velikaSlika{
+        display:none; 
+        
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding:5vw;
+        
+    }
+    .velikaSlika .fonSlika img{
+        width:90vw;
+    }
+    .velikaSlika p{
+        font-size:5vw;
+        font-family: Reggae One;
+        color:white;
+    }
+    .velikaSlika .fonDugme{
+        width:50vw;
+        height:15vw;
+        background-color: rgb(112, 0, 0);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        border-radius:2vw;
+    }
+    .velikaSlika #back{
+        color:rgb(112, 0, 0);
+        font-family: Reggae One;
+    }
+
+    .fonCartBar{
+        width:100vw;
+        height:100vh;
+        
+        position:fixed;
+        display:none;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .fonCartBar .logoIcijena h2{
+        color:rgb(226, 210, 68);
+        font-family: Reggae One;
+        font-size:7vw;
+        
+    }
+    .fonCartBar .logoIcijena p{
+        color:rgb(97, 1, 1);
+        font-family: Reggae One;
+        font-size:7vw;
+    }
+    .fonCartBar .logoIcijena{
+        display:flex;
+        width:100vw;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .fonCartBar .cartBarDugmici {
+        display:flex;
+        width: 100vw;
+        position:absolute;
+        bottom:5vw;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .fonCartBar .cancel{
+        background-color:rgb(97, 1, 1);
+        color:white;
+        font-family: Reggae One;
+        width:30vw;
+        font-size:4vw;
+        display: flex;
+        justify-content: center;
+    }
+    .fonCartBar .checkOut{
+        background-color:rgb(0, 126, 48);
+        color:white;
+        font-family: Reggae One;
+        width:30vw;
+        font-size:4vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .fonCartBar .listaItema1{
+        display:flex;
+        flex-direction: column;
+        
+        width:100vw;
+        
+    }
+    .fonCartBar .listaItema1 .cartItem{
+        display:flex;
+        color:White;
+        justify-content: space-around;
+        margin:5vw;
+        font-family: Reggae One;
+        align-items: center;
+    }
+    .fonCartBar .listaItema1  p{
+       margin-right:5vw;
+    }
+
+    .fonCartBar .listaItema1 .cartLinija{
+        width:100vw;
+        height:.1vw;
+        background-color:White;
+    }
+
+    .fonCartBar .listaItema1 .cartX p{
+        color:rgb(112, 0, 0);
+        font-size:4vw;
+        
+    }
     
     
 }
