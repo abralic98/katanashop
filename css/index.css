@@ -1700,7 +1700,7 @@ body{
         display:flex;
         width: 100vw;
         position:absolute;
-        bottom:15vw;
+        bottom:20vw;
         justify-content: space-around;
         align-items: center;
     }
