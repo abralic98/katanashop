@@ -452,7 +452,12 @@ function pozoviKlasuItema1(broj,brojItema){//broj je 1 2 3..> koju klasu sam iza
     }
 
 }
-
+function velikaSlikaAbsolute(){//da postane absolut
+    let velikaSlika=document.getElementById("velikaSlika").style.position="absolute";
+}
+function velikaSlikaFixed(){
+    let velikaSlika=document.getElementById("velikaSlika").style.position="fixed";
+}
 function fonOtvoriElement(broj){
     let fon=document.getElementById("fon");
     let velikaSlika=document.getElementById("velikaSlika"); // u novom bloku
@@ -468,7 +473,7 @@ function fonOtvoriElement(broj){
     imeElementa.innerHTML=ime[broj].innerHTML;
     cijenaElementa.innerHTML=cijena[broj].innerHTML;
     velikaSlika.style.display="flex";
-    velikaSlika.style.position="fixed";
+    setTimeout(velikaSlikaAbsolute,1000);
 
     fon.style.animation="livoNestani 1s forwards";
     fon.style.position="absolute";
@@ -484,6 +489,7 @@ function fonZatvoriElement(){
     velikaSlika.style.animation="desnoNestani 1s forwards";
     fon.style.display="block";
     fon.style.animation="livoStvoriSe 1s forwards";
+    velikaSlikaFixed();
 
 }
 
@@ -493,8 +499,13 @@ function otvoriFonCart(){
     cart.style.display="flex";
     fon.style.animation="desnoNestani 1s forwards";
     cart.style.animation="livoStvoriSe 1s forwards";
-
     setTimeout(nestaniFon,1000); 
+}
+function cartAbsolute(){
+    let cart=document.getElementById("fonCartBar");  
+    cart.style.position="absolute";
+    let dugmici=document.getElementsByClassName("cartBarDugmici");
+    dugmici[1].style.position="relative";
 }
 
 function zatvoriCartFon(){
@@ -522,6 +533,7 @@ function dodajItemFon(brojItema){
     let editovanje=document.getElementById("listaItema1"); //cili blok
     let finalnaCijena=document.getElementsByClassName("zbrojenaCijenaFon");//block cijena
     let headerCijena=document.getElementById("cijenaCartFon");//home cijena
+    setTimeout(cartAbsolute,1000);
 
     noviHTML.innerHTML=editovanje.innerHTML
     if(brojElementaFon==1){
@@ -781,6 +793,11 @@ function obrisiItemStoreFon(brojItema,cena){
     
 }
 
+function dugmeText(){//zeleno crveno add to cart
+    let fonDugme=document.getElementById("fonDugme").style.background="rgb(112, 0, 0)";
+    let fonDugmeP=document.getElementById("fonDugmeP").innerHTML="Add To Cart"
+}
+
 function addToCartFon1(){ //  dodavanje u store sa bara di je jedan element i velikka slika
     let ime=document.getElementById("imeElementaFon");
     let noviHTML="";
@@ -788,6 +805,9 @@ function addToCartFon1(){ //  dodavanje u store sa bara di je jedan element i ve
     let editovanje=document.getElementById("listaItema1"); //cili blok
     let finalnaCijena=document.getElementsByClassName("zbrojenaCijenaFon");//block cijena
     let headerCijena=document.getElementById("cijenaCartFon");//home cijena
+    let fonDugme=document.getElementById("fonDugme").style.background="rgb(0, 126, 48)";
+    let fonDugmeP=document.getElementById("fonDugmeP").innerHTML="Added"
+    setTimeout(dugmeText,500)
     let objekt=new item(ime.innerHTML,cijena.innerHTML);
     items.push(objekt);
     noviHTML.innerHTML=editovanje.innerHTML;

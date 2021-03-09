@@ -1640,7 +1640,7 @@ body{
 
     .velikaSlika{
         display:none; 
-        
+        position:fixed;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -1663,6 +1663,7 @@ body{
         align-items: center;
         justify-content: center;
         border-radius:2vw;
+        transition:0.1s;
     }
     .velikaSlika #back{
         color:rgb(112, 0, 0);
@@ -1672,7 +1673,7 @@ body{
     .fonCartBar{
         width:100vw;
         height:100vh;
-        
+        top:0;
         position:fixed;
         display:none;
         flex-direction: column;
@@ -1701,6 +1702,7 @@ body{
         width: 100vw;
         position:absolute;
         bottom:20vw;
+        margin-top:30vw;
         justify-content: space-around;
         align-items: center;
     }
