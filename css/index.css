@@ -1701,8 +1701,8 @@ body{
         display:flex;
         width: 100vw;
         position:absolute;
-        bottom:20vw;
-        margin-top:30vw;
+        bottom:10em;
+        margin-top:15em;
         justify-content: space-around;
         align-items: center;
     }

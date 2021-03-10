@@ -21,42 +21,52 @@ function prebaciElement(broj){
     let novaCijena=document.getElementById("elementDioCijena");
 
     let manjaSlika1=document.getElementById("manjaSlika1");
-    let manjaSlikka2=document.getElementById("manjaSlika2");
+    let manjaSlika2=document.getElementById("manjaSlika2");
+    let zoomINslika=document.getElementById("zoomINslika");
 
     //minjanje slika kad stisnem na neki element 
     if(brojElementa==0){
+        zoomINslika.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
     }
     if(brojElementa==1){
+        zoomINslika.src=`images/1060/${broj+1}_2.jpg`
         manjaSlika1.src=`images/1060/${broj+1}_2.jpg`
         manjaSlika2.src=`images/1060/${broj+1}_1.jpg`
     }
     if(brojElementa==2){
+        zoomINslika.src=`images/2klasa/${broj+1}_2.jpg`
         manjaSlika1.src=`images/2klasa/${broj+1}_2.jpg`
         manjaSlika2.src=`images/2klasa/${broj+1}_1.jpg`
     }
     if(brojElementa==3){
+        zoomINslika.src=`images/3klasa/${broj+1}_2.jpg`
         manjaSlika1.src=`images/3klasa/${broj+1}_2.jpg`
         manjaSlika2.src=`images/3klasa/${broj+1}_1.jpg`
     }
     if(brojElementa==4){
+        zoomINslika.src=`images/4klasa/${broj+1}_2.jpg`
         manjaSlika1.src=`images/4klasa/${broj+1}_2.jpg`
         manjaSlika2.src=`images/4klasa/${broj+1}_1.jpg`
     }
     if(brojElementa==5){
+        zoomINslika.src=`images/5klasa/${broj+1}_2.jpg`
         manjaSlika1.src=`images/5klasa/${broj+1}_2.jpg`
         manjaSlika2.src=`images/5klasa/${broj+1}_1.jpg`
     }
     if(brojElementa==6){
+        zoomINslika.src=`images/6klasa/${broj+1}_2.jpg`
         manjaSlika1.src=`images/6klasa/${broj+1}_2.jpg`
         manjaSlika2.src=`images/6klasa/${broj+1}_1.jpg`
     }
     if(brojElementa==7){
+        zoomINslika.src=`images/7klasa/${broj+1}_2.jpg`
         manjaSlika1.src=`images/7klasa/${broj+1}_2.jpg`
         manjaSlika2.src=`images/7klasa/${broj+1}_1.jpg`
     }
     if(brojElementa==8){
+        zoomINslika.src=`images/8klasa/${broj+1}_2.jpg`
         manjaSlika1.src=`images/8klasa/${broj+1}_2.jpg`
         manjaSlika2.src=`images/8klasa/${broj+1}_1.jpg`
     }
@@ -77,6 +87,7 @@ function prebaciElement1(broj){
     let ime=document.querySelectorAll(".pcCrniDioNovi .element .opisElementa .opisElementaP"); //ime elementa  KOJEG KLIKNEMO u store
     let cijena=document.querySelectorAll(".pcCrniDioNovi .element .cijenaElementa .cijenaElementaP"); //cijena elementa KOJEG KLIKNEMO u store
     let slika=document.querySelectorAll(".pcCrniDioNovi .element .slikaElementa .slikaElementaIMG"); //slika element KOJEGKLIKNEMO u store
+    let zoomINslika=document.getElementById("zoomINslika");
 
     let novoIme=document.getElementById("elementDioIme");
     let novaSlika=document.getElementById("elementDioSlika");
@@ -87,50 +98,62 @@ function prebaciElement1(broj){
 
     //minjanje slika kad stisnem na neki element 
     if(broj==0){
+        zoomINslika.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
     }
     if(broj==1){
+        zoomINslika.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
     }
     if(broj==2){
+        zoomINslika.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
     }
     if(broj==3){
+        zoomINslika.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
     }
     if(broj==4){
+        zoomINslika.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
     }
     if(broj==5){
+        zoomINslika.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
     }
     if(broj==6){
+        zoomINslika.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
     }
     if(broj==7){
+        zoomINslika.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
     }
     if(broj==8){
+        zoomINslika.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
     }
     if(broj==9){
+        zoomINslika.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
     }
     if(broj==10){
+        zoomINslika.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
     }
-    if(broj==8){
+    if(broj==11){
+        zoomINslika.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika1.src=`images/novekatane/${broj+1}_2.jpg`
         manjaSlika2.src=`images/novekatane/${broj+1}_1.jpg`
     }
@@ -1338,6 +1361,9 @@ function dodajItemStoreZoom(){
     let empty=document.getElementsByClassName("addITEMS");
     let finalnaCijena=document.getElementsByClassName("zbrojenaCijena");
     let headerCijena=document.getElementById("cijenaCart");
+    let pcDugme=document.getElementById("dugmeKupide5").style.background="rgb(0, 126, 48)";
+    let pcDugmeP=document.getElementById("dugmeKupide5p").innerHTML="Added"
+    setTimeout(dugmeTextPc,300);
     empty[0].innerHTML="ITEMS: "+brojItemaArrayStore;
     
     let stariHTML=editovanje[0].innerHTML;   
@@ -1432,6 +1458,11 @@ function obrisiItemStoreZoom(brojItema,cena){
 
 function contactStore(broj){
     prebaciStore();
+}
+
+function dugmeTextPc(){
+    let pcDugme=document.getElementById("dugmeKupide5").style.background="rgb(112, 0, 0)";
+    let pcDugmeP=document.getElementById("dugmeKupide5p").innerHTML="Add To Cart"
 }
 
 //email smptjs
