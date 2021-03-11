@@ -1765,7 +1765,13 @@ body{
         font-size:4vw;
         
     }
-    
+    .fonStore .addToCart{
+        
+        height:8vw;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
     
 }
 

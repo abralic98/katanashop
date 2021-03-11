@@ -23,6 +23,7 @@ function zatvoriDesniBar(broj){
     let cijena=document.querySelectorAll(".fonHome .fonCrniDioNovi .element .cijenaElementa .cijenaElementaP"); //cijena elementa
     fon.style.display="block";
     if (broj==0){
+        
         home.style.display="block";
         faq.style.display="none";
         contact.style.display="none"
