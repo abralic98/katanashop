@@ -4,6 +4,7 @@
 let brojElementa=0; 
 //0 default
 //1 1060 modeli
+let univerz=0;
 
 function prebaciElement(broj){
     let element=document.getElementById("elementDio").style.display="flex"
@@ -190,6 +191,7 @@ function zoomOUTslika(){
     zoomBlok[0].style.display="none"
 }
 function prebaciStore(){
+    cijenaUkupnoStore=cijenaUkupno;
     let home=document.getElementById("homeDio").style.display="none";
     let faq=document.getElementById("faqDio").style.display="none";
     let contact=document.getElementById("contactDio").style.display="none";
@@ -1066,12 +1068,13 @@ function storeCartDugmeR(broj){
 
 //addtocart store
 
-let brojItemaArrayStore=0;
+
 let cijenaUkupnoStore=0;
 // ARRAY SA ITEMIMA
 
 function dodajItemStore(brojItema){
-    brojItemaArrayStore++;
+    
+    brojItemaArray++;
     let noviHTML;
     let ime=document.getElementsByClassName("opisElementaP");
     let cijena=document.getElementsByClassName("cijenaElementaP");
@@ -1082,9 +1085,36 @@ function dodajItemStore(brojItema){
     
     
     
-    empty[0].innerHTML="ITEMS: "+brojItemaArrayStore;
+    empty[0].innerHTML="ITEMS: "+brojItemaArray;
     
     let stariHTML=editovanje[0].innerHTML;   
+    if(brojElementa==0){
+        
+        ime[0].innerHTML="Tanto Knife 1060 Carbon Steel With Matt Black Saya";
+        cijena[0].innerHTML="$149";
+        ime[1].innerHTML="Battle Ready Katana Sword T10 Clay Tempered Steel Blue Acid Dye with White Saya";
+        cijena[1].innerHTML="$349";
+        ime[2].innerHTML="Battle Ready Katana Choji Hamon T10 Clay Tempered Steel with Hadori Polish";
+        cijena[2].innerHTML="$549";
+        ime[3].innerHTML="Japanese Tanto Blade 1095 Folded Steel";
+        cijena[3].innerHTML="$239"
+        ime[4].innerHTML="Battle Ready Katana 1060 Carbon Steel with Sparkle Black Hardwood Saya";
+        cijena[4].innerHTML="$279";
+        ime[5].innerHTML="1060 Carbon Steel Tanto Knife With Matt Black Sun Tzu saya";
+        cijena[5].innerHTML="$179";
+        ime[6].innerHTML="Battle Ready Shirasaya Katana T10 Folded Clay Tempered Steel Gloss Black Sun Tzu Saya";
+        cijena[6].innerHTML="$469";
+        ime[7].innerHTML="Japanese Katana T10 Folded Clay Tempered Steel with Hadori Polish";
+        cijena[7].innerHTML="$799";
+        ime[8].innerHTML="Shirasaya Tanto 1095 Folded Steel with Ebony Wood Saya";
+        cijena[8].innerHTML="$329";
+        ime[9].innerHTML="Battle Ready Katana Samurai Sword T10 Clay Tempered Steel with Black Acid Dye";
+        cijena[9].innerHTML="$429";
+        ime[10].innerHTML="Hexagon Rosewood Shirasaya T10 Clay Tempered Steel Kiriha Zukuri";
+        cijena[10].innerHTML="$429";
+        ime[11].innerHTML="Samurai Nodachi Sword 1060 Carbon Steel with White Saya";
+        cijena[11].innerHTML="$349";
+    }
     if(brojElementa==1){
         
         ime[0].innerHTML="1060 Carbon Steel Chinese Dadao Sword With Synthetic Leather Holsters Saya";
@@ -1291,15 +1321,20 @@ function dodajItemStore(brojItema){
     
     //console.log(noviHTML)
     editovanje[0].innerHTML=noviHTML;   
-    cijenaUkupnoStore=Number(cijenaUkupnoStore)+Number(cijenaBez$);
-    finalnaCijena[0].innerHTML="$"+cijenaUkupnoStore;
-    headerCijena.innerHTML="$"+cijenaUkupnoStore;
+    univerz=Number(univerz)+Number(cijenaBez$);
+    console.log(univerz)
+    
+    finalnaCijena[0].innerHTML="$"+univerz;
+    headerCijena.innerHTML="$"+univerz;
     console.log(items.length)
+
+    
+    
     
 }
 
-function obrisiItemStore(brojItema,cena){
-    brojItemaArrayStore--
+function obrisiItemStore(brojItema){
+    brojItemaArray--
     let noviHTML;
     let ime=document.getElementsByClassName("opisElementaP");
     let cijena=document.getElementsByClassName("cijenaElementaP");
@@ -1307,20 +1342,17 @@ function obrisiItemStore(brojItema,cena){
     let empty=document.getElementsByClassName("addITEMS");
     let finalnaCijena=document.getElementsByClassName("zbrojenaCijena");
     let headerCijena=document.getElementById("cijenaCart");
-    
-    empty[0].innerHTML="ITEMS: "+brojItemaArrayStore;
-    
+    let cijenaBez$; 
+    empty[0].innerHTML="ITEMS: "+brojItemaArray;
+    console.log(items[brojItema].cijena)
+    cijenaBez$=items[brojItema].cijena.substring(1);
     let stariHTML="";   
     
     if(brojItema>-1){
         items.splice(brojItema,1)
     }
     console.log(items)
-    let cijenaBez$; 
-    
-    cijenaBez$=cijena[brojItema].innerHTML.substring(1);
-    //console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG")
-    //console.log(items.length)
+
     for(let i=0; i<items.length; i++){
         stariHTML=stariHTML+
     `<div class="cartItem">
@@ -1339,21 +1371,21 @@ function obrisiItemStore(brojItema,cena){
     
     }
     
-    cijenaBez$=cena;
+    
     
     //console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG NAKON PETLJE")
     editovanje[0].innerHTML=stariHTML;   
-    console.log("CENA "+cena)
-    cijenaUkupnoStore=Number(cijenaUkupnoStore)-Number(cijenaBez$);
-    finalnaCijena[0].innerHTML="$"+cijenaUkupnoStore;
-    headerCijena.innerHTML="$"+cijenaUkupnoStore;
+    univerz=Number(univerz)-Number(cijenaBez$);
+    console.log(univerz)
+    finalnaCijena[0].innerHTML="$"+univerz;
+    headerCijena.innerHTML="$"+univerz;
     
 }
 
 // zoom cart
 
 function dodajItemStoreZoom(){
-    brojItemaArrayStore++;
+    brojItemaArray++;
     let noviHTML;
     let ime=document.getElementById("elementDioIme");
     let cijena=document.getElementById("elementDioCijena");
@@ -1364,7 +1396,7 @@ function dodajItemStoreZoom(){
     let pcDugme=document.getElementById("dugmeKupide5").style.background="rgb(0, 126, 48)";
     let pcDugmeP=document.getElementById("dugmeKupide5p").innerHTML="Added"
     setTimeout(dugmeTextPc,300);
-    empty[0].innerHTML="ITEMS: "+brojItemaArrayStore;
+    empty[0].innerHTML="ITEMS: "+brojItemaArray;
     
     let stariHTML=editovanje[0].innerHTML;   
     
@@ -1374,6 +1406,7 @@ function dodajItemStoreZoom(){
     console.log(items);
     let cijenaBez$; 
     cijenaBez$=cijena.innerHTML.substring(1);
+    console.log(cijenaBez$)
     for(let i=0; i<items.length; i++){
         noviHTML=stariHTML+
     `<div class="cartItem">
@@ -1381,7 +1414,7 @@ function dodajItemStoreZoom(){
         <div class="cartLinija">
         </div>
         <p class="cijenaModela">${items[i].cijena}</p>
-        <div onclick="obrisiItemStore(${i},${items[i].cijena.substring(1)})"class="cartX">
+        <div onclick="obrisiItemStoreZoom(${i},${items[i].cijena.substring(1)})"class="cartX">
             <p> X </p> 
         </div>
     </div>`;
@@ -1392,40 +1425,37 @@ function dodajItemStoreZoom(){
     }
     
     //console.log(noviHTML)
-    editovanje[0].innerHTML=noviHTML;   
-    cijenaUkupnoStore=Number(cijenaUkupnoStore)+Number(cijenaBez$);
-    finalnaCijena[0].innerHTML="$"+cijenaUkupnoStore;
-    headerCijena.innerHTML="$"+cijenaUkupnoStore;
+    editovanje[0].innerHTML=noviHTML; 
+    univerz=Number(univerz)+Number(cijenaBez$);
+   
+    finalnaCijena[0].innerHTML="$"+univerz;
+    headerCijena.innerHTML="$"+univerz;
     console.log(items.length)
     
 }
 
-function obrisiItemStoreZoom(brojItema,cena){
-    brojItemaArrayStore--
+function obrisiItemStoreZoom(brojItema){
+    brojItemaArray--
     let noviHTML;
     let ime=document.getElementsByClassName("opisElementaP");
-    let cijena=document.getElementsByClassName("cijenaElementaP");
+    let cijena=document.getElementById("elementDioCijena");
     let editovanje=document.getElementsByClassName("listaItema");
     let empty=document.getElementsByClassName("addITEMS");
     let finalnaCijena=document.getElementsByClassName("zbrojenaCijena");
     let headerCijena=document.getElementById("cijenaCart");
     
-    empty[0].innerHTML="ITEMS: "+brojItemaArrayStore;
-    
+    empty[0].innerHTML="ITEMS: "+brojItemaArray;
+    let cijenaBez$; 
     let stariHTML="";   
-    
+    cijenaBez$=items[brojItema].cijena.substring(1);
     if(brojItema>-1){
         items.splice(brojItema,1)
     }
     console.log(items)
-    let cijenaBez$; 
-    
-    cijenaBez$=cijena[brojItema].innerHTML.substring(1);
-    //console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG")
-    //console.log(items.length)
-    for(let i=0; i<items.length; i++){
+
+    for(let i=0; i<items.length; i++){ 
         stariHTML=stariHTML+
-    `<div class="cartItem">
+    `<div class="cartItem"> 
         <p class="imeModela">${items[i].ime}</p>
         <div class="cartLinija">
         </div>
@@ -1441,14 +1471,14 @@ function obrisiItemStoreZoom(brojItema,cena){
     
     }
     
-    cijenaBez$=cena;
+    
     
     //console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG NAKON PETLJE")
     editovanje[0].innerHTML=stariHTML;   
-    console.log("CENA "+cena)
-    cijenaUkupnoStore=Number(cijenaUkupnoStore)-Number(cijenaBez$);
-    finalnaCijena[0].innerHTML="$"+cijenaUkupnoStore;
-    headerCijena.innerHTML="$"+cijenaUkupnoStore;
+    univerz=Number(univerz)-Number(cijenaBez$);
+    
+    finalnaCijena[0].innerHTML="$"+univerz;
+    headerCijena.innerHTML="$"+univerz;
     
 }
 

@@ -424,7 +424,7 @@ let cijenaUkupno=0;
 
 function dodajItem(brojItema){
     brojItemaArray++;
-    brojItemaArrayStore++;
+    
     let noviHTML
     let ime=document.getElementsByClassName("opisElementaP");
     let cijena=document.getElementsByClassName("cijenaElementaP");
@@ -466,10 +466,11 @@ function dodajItem(brojItema){
     
     //console.log(noviHTML)
     editovanje[0].innerHTML=noviHTML;   
-    cijenaUkupno=Number(cijenaUkupno)+Number(cijenaBez$);
-    finalnaCijena[0].innerHTML="$"+cijenaUkupno;
-    headerCijena[0].innerHTML="$"+cijenaUkupno;
-    headerCijena[1].innerHTML="$"+cijenaUkupno;
+    univerz=Number(univerz)+Number(cijenaBez$);
+    console.log(univerz)
+    finalnaCijena[0].innerHTML="$"+univerz;
+    headerCijena[0].innerHTML="$"+univerz;
+    headerCijena[1].innerHTML="$"+univerz;
     console.log(items.length)
     
 }
@@ -485,16 +486,15 @@ function obrisiItem(brojItema,cena){
     let headerCijena=document.getElementsByClassName("cijenaCart");
     
     empty[0].innerHTML="ITEMS: "+brojItemaArray;
-    
+    let cijenaBez$; 
     let stariHTML="";   
+    cijenaBez$=items[brojItema].cijena.substring(1);
     
     if(brojItema>-1){
         items.splice(brojItema,1)
     }
     console.log(items)
-    let cijenaBez$; 
     
-    cijenaBez$=cijena[brojItema].innerHTML.substring(1);
     //console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG")
     //console.log(items.length)
     for(let i=0; i<items.length; i++){
@@ -519,11 +519,13 @@ function obrisiItem(brojItema,cena){
     //console.log(cijenaBez$+ " OVO JE CIJENA TRENUTNOG ITEMA OBRISANOG NAKON PETLJE")
     editovanje[0].innerHTML=stariHTML;   
     console.log(cena+ " CENA")
-    cijenaUkupno=Number(cijenaUkupno)-Number(cijenaBez$);
-    console.log(cijenaUkupno);
-    finalnaCijena[0].innerHTML="$"+cijenaUkupno;
-    headerCijena[0].innerHTML="$"+cijenaUkupno;
-    headerCijena[1].innerHTML="$"+cijenaUkupno;
+    univerz=Number(univerz)-Number(cijenaBez$);
+    console.log(univerz)
+    finalnaCijena[0].innerHTML="$"+univerz;
+    headerCijena[0].innerHTML="$"+univerz;
+    headerCijena[1].innerHTML="$"+univerz;
+    
+
     
 }
 let items=[];
@@ -557,8 +559,41 @@ function displayNoneCart(){
 let brojrotiranja=-1;
 
 function prebaciHOME(){
-    
-    location.reload(); 
+    cijenaUkupno=cijenaUkupnoStore;
+    let home=document.getElementById("homeDio").style.display="block";
+    let faq=document.getElementById("faqDio").style.display="none";
+    let contact=document.getElementById("contactDio").style.display="none";
+    let store=document.getElementById("storeDio").style.display="none";
+    let element=document.getElementById("elementDio").style.display="none"
+    brojElementa=0;
+    let ime=document.getElementsByClassName("opisElementaP");
+    let cijena=document.getElementsByClassName("cijenaElementaP");
+
+        ime[0].innerHTML="Tanto Knife 1060 Carbon Steel With Matt Black Saya";
+        cijena[0].innerHTML="$149";
+        ime[1].innerHTML="Battle Ready Katana Sword T10 Clay Tempered Steel Blue Acid Dye with White Saya";
+        cijena[1].innerHTML="$349";
+        ime[2].innerHTML="Battle Ready Katana Choji Hamon T10 Clay Tempered Steel with Hadori Polish";
+        cijena[2].innerHTML="$549";
+        ime[3].innerHTML="Japanese Tanto Blade 1095 Folded Steel";
+        cijena[3].innerHTML="$239"
+        ime[4].innerHTML="Battle Ready Katana 1060 Carbon Steel with Sparkle Black Hardwood Saya";
+        cijena[4].innerHTML="$279";
+        ime[5].innerHTML="1060 Carbon Steel Tanto Knife With Matt Black Sun Tzu saya";
+        cijena[5].innerHTML="$179";
+        ime[6].innerHTML="Battle Ready Shirasaya Katana T10 Folded Clay Tempered Steel Gloss Black Sun Tzu Saya";
+        cijena[6].innerHTML="$469";
+        ime[7].innerHTML="Japanese Katana T10 Folded Clay Tempered Steel with Hadori Polish";
+        cijena[7].innerHTML="$799";
+        ime[8].innerHTML="Shirasaya Tanto 1095 Folded Steel with Ebony Wood Saya";
+        cijena[8].innerHTML="$329";
+        ime[9].innerHTML="Battle Ready Katana Samurai Sword T10 Clay Tempered Steel with Black Acid Dye";
+        cijena[9].innerHTML="$429";
+        ime[10].innerHTML="Hexagon Rosewood Shirasaya T10 Clay Tempered Steel Kiriha Zukuri";
+        cijena[10].innerHTML="$429";
+        ime[11].innerHTML="Samurai Nodachi Sword 1060 Carbon Steel with White Saya";
+        cijena[11].innerHTML="$349";
+    pozoviKlasuItema(0,12);
 }
 
 
