@@ -101,10 +101,18 @@ body{
     display:flex;
 
 }
-.pc .header a:nth-child(1){
-    padding-left:38vw;
+.pc .headerBarovi{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:-1.3vw;
+    margin-left:32vw;
     
 }
+.pc .naslovHeader p{
+    cursor: pointer;
+}
+
 
 .pc .header a{ 
     color:white;
@@ -1209,7 +1217,7 @@ body{
 
 
 
-@media only screen and (max-width: 1400px) and (min-width:600px){ /*tablet*/
+@media only screen and (max-width: 1400px) and (min-width:700px){ /*tablet*/
     
     .naslovHeader{
         transform:translate(0,2vw)
@@ -1230,7 +1238,7 @@ body{
     }
 
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .pc{
         display:none;
     }
@@ -1678,6 +1686,7 @@ body{
         display:none;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
         
     }
     .fonCartBar .logoIcijena h2{
@@ -1700,9 +1709,9 @@ body{
     .fonCartBar .cartBarDugmici {
         display:flex;
         width: 100vw;
-        position:absolute;
-        bottom:5em;
-        margin-top:15em;
+        
+        margin-top:10vw;
+        margin-bottom: 10vw;
         justify-content: space-around;
         align-items: center;
     }

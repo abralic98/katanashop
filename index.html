@@ -27,7 +27,7 @@
                 <img src="images/drvo.jpg" alt="">
             </div>
             <div class="naslovHeader">
-                <p>Jojo's Katana Shop</p>
+                <p onclick="reload()">Jojo's Katana Shop</p>
                 <img id="katananaslov" src="images/katananaslov.png" alt="">
                 <img id="baloni" src="images/baloni.png" alt="">
             </div>
@@ -51,10 +51,13 @@
         
         
         <div class="header">
-            <a onclick="prebaciHOME()" href="#">Home</a>
-            <a onclick="prebaciStore()"href="#">Store</a>
-            <a onclick="prebaciFAQ()" href="#">FAQ</a>
-            <a onclick="prebaciContact()" href="#">Contact Us</a>
+            <div class="headerBarovi">
+                <a onclick="prebaciHOME()" href="#">Home</a>
+                <a onclick="prebaciStore()"href="#">Store</a>
+                <a onclick="prebaciFAQ()" href="#">FAQ</a>
+                <a onclick="prebaciContact()" href="#">Contact Us</a>
+            </div>
+            
             <p class="cijenaCart" id="cijenaCart">$0</p>
             <img onclick="cartStvori()" src="images/shopping.png" alt="">
 

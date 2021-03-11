@@ -1,5 +1,7 @@
 // hoveranje preko slajdera
-
+function reload(){
+    location.reload();
+}
 function minus3slajd(){
     let crno=document.getElementsByClassName("slidecrno");
     let slideopis=document.getElementsByClassName("slideopis");
