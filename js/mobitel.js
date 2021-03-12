@@ -503,6 +503,35 @@ function fonOtvoriElement(broj){
     let ime=document.querySelectorAll(".fonStore .fonCrniDioNovi .element .opisElementa .opisElementaP"); //ime elementa u listi
     let cijena=document.querySelectorAll(".fonStore .fonCrniDioNovi .element .cijenaElementa .cijenaElementaP"); //cijena elementa u listi
 
+    if(brojElementaFon==0){
+        for(let i=0; i<12; i++){//stvori slike te kklase
+            slika[i].src=`images/novekatane/${i+1}_2.jpg`;
+        }
+        ime[0].innerHTML="Tanto Knife 1060 Carbon Steel With Matt Black Saya";
+        cijena[0].innerHTML="$149";
+        ime[1].innerHTML="Battle Ready Katana Sword T10 Clay Tempered Steel Blue Acid Dye with White Saya";
+        cijena[1].innerHTML="$349";
+        ime[2].innerHTML="Battle Ready Katana Choji Hamon T10 Clay Tempered Steel with Hadori Polish";
+        cijena[2].innerHTML="$549";
+        ime[3].innerHTML="Japanese Tanto Blade 1095 Folded Steel";
+        cijena[3].innerHTML="$239"
+        ime[4].innerHTML="Battle Ready Katana 1060 Carbon Steel with Sparkle Black Hardwood Saya";
+        cijena[4].innerHTML="$279";
+        ime[5].innerHTML="1060 Carbon Steel Tanto Knife With Matt Black Sun Tzu saya";
+        cijena[5].innerHTML="$179";
+        ime[6].innerHTML="Battle Ready Shirasaya Katana T10 Folded Clay Tempered Steel Gloss Black Sun Tzu Saya";
+        cijena[6].innerHTML="$469";
+        ime[7].innerHTML="Japanese Katana T10 Folded Clay Tempered Steel with Hadori Polish";
+        cijena[7].innerHTML="$799";
+        ime[8].innerHTML="Shirasaya Tanto 1095 Folded Steel with Ebony Wood Saya";
+        cijena[8].innerHTML="$329";
+        ime[9].innerHTML="Battle Ready Katana Samurai Sword T10 Clay Tempered Steel with Black Acid Dye";
+        cijena[9].innerHTML="$429";
+        ime[10].innerHTML="Hexagon Rosewood Shirasaya T10 Clay Tempered Steel Kiriha Zukuri";
+        cijena[10].innerHTML="$429";
+        ime[11].innerHTML="Samurai Nodachi Sword 1060 Carbon Steel with White Saya";
+        cijena[11].innerHTML="$349";
+    }
     slikaElementa.src=slika[broj].src;
     imeElementa.innerHTML=ime[broj].innerHTML;
     cijenaElementa.innerHTML=cijena[broj].innerHTML;
