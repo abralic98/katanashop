@@ -505,7 +505,7 @@ function fonOtvoriElement(broj){
 
     if(brojElementaFon==0){
         for(let i=0; i<12; i++){//stvori slike te kklase
-            slika[i].src=`images/novekatane/${i+1}_2.jpg`;
+            slika[i].src=`images/novekatane/${i+1}_1.jpg`;
         }
         ime[0].innerHTML="Tanto Knife 1060 Carbon Steel With Matt Black Saya";
         cijena[0].innerHTML="$149";
